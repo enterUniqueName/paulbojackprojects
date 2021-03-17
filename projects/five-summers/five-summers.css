@@ -1,0 +1,81 @@
+body {
+    background: black;
+}
+
+#text_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: black;
+    opacity: 1;
+}
+  
+#overall_text {
+    color: white;
+    position: absolute;
+    color: #808080;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#overall_text div {
+    position: fixed;
+    width: 20vw;
+    text-align: center;
+}
+
+#word1 { left: 0; }
+#word2 { left: 20vw; }
+#word3 { left: 40vw; }
+#word4 { left: 60vw; }
+#word5 { left: 80vw; }
+
+#t1, #t2, #t3, #t4, #t5, #t6, #t7, #t8, #t9, #t10, #t11, #t12, #t13, #t14, #t15, #t16, #t17, #t18, #t19, #t20, #t21 { opacity: 0; }
+  
+  
+
+
+/* Animation */
+.fadein_bg {
+    animation-name: fadein_bg;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein_bg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fadeout_txt{
+    animation-name: fadeout_txt;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_txt {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.fadein_bg_slow {
+    animation-name: fadein_bg_slow;
+    animation-duration: 21s;
+    animation-fill-mode: forwards;
+    background-color: black;
+}
+@keyframes fadein_bg_slow {
+    0% {opacity: 1;}
+    /* 5s transition to half black */
+    23% {opacity: 0.3;} 
+    /* 10s hold on half black */
+    70% {opacity: 0.3;}
+    /* 3s transition to normal video */
+    84.9% {opacity: 0.75;}
+    85% {opacity: 0;}
+    100% {opacity: 0;}
+}

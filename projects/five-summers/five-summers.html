@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Only Five Summers Left</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='five-summers.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="text_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="text_container">
+
+    <div id="overall_text">
+
+      <div id="word1">
+        <span id="t19">m</span><span id="t20">e</span>
+      </div>
+
+      <div id="word2">
+        <span id="t17">t</span><span id="t18">o</span>
+      </div>
+
+      <div id="word3">
+        <span id="t9">h</span><span id="t10">a</span><span id="t11">p</span><span id="t12">p</span><span id="t13">e</span><span id="t14">n</span><span id="t15">e</span><span id="t16">d</span>
+      </div>
+
+      <div id="word4">
+        <span id="t5">e</span><span id="t6">v</span><span id="t7">e</span><span id="t8">r</span>
+      </div>
+
+      <div id="word5">
+        <span id="t1">W</span><span id="t2">h</span><span id="t3">a</span><span id="t4">t</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+    function fadein_bg() {
+      document.getElementById("cam_container").classList.add("fadein_bg_slow");
+    }
+    function pop() {
+      document.getElementById("text_container").style.opacity = 0;
+      document.getElementById("overall_text").style.opacity = 0;
+    }
+
+    //text pop-ups (using "fadein_bg" since it's the same duration)
+    function fadein_1() {
+      document.getElementById("t1").classList.add("fadein_bg");
+    }
+    function fadein_2() {
+      document.getElementById("t2").classList.add("fadein_bg");
+    }
+    function fadein_3() {
+      document.getElementById("t3").classList.add("fadein_bg");
+    }
+    function fadein_4() {
+      document.getElementById("t4").classList.add("fadein_bg");
+    }
+    function fadein_5() {
+      document.getElementById("t5").classList.add("fadein_bg");
+    }
+    function fadein_6() {
+      document.getElementById("t6").classList.add("fadein_bg");
+    }
+    function fadein_7() {
+      document.getElementById("t7").classList.add("fadein_bg");
+    }
+    function fadein_8() {
+      document.getElementById("t8").classList.add("fadein_bg");
+    }
+    function fadein_9() {
+      document.getElementById("t9").classList.add("fadein_bg");
+    }
+    function fadein_10() {
+      document.getElementById("t10").classList.add("fadein_bg");
+    }
+    function fadein_11() {
+      document.getElementById("t11").classList.add("fadein_bg");
+    }
+    function fadein_12() {
+      document.getElementById("t12").classList.add("fadein_bg");
+    }
+    function fadein_13() {
+      document.getElementById("t13").classList.add("fadein_bg");
+    }
+    function fadein_14() {
+      document.getElementById("t14").classList.add("fadein_bg");
+    }
+    function fadein_15() {
+      document.getElementById("t15").classList.add("fadein_bg");
+    }
+    function fadein_16() {
+      document.getElementById("t16").classList.add("fadein_bg");
+    }
+    function fadein_17() {
+      document.getElementById("t17").classList.add("fadein_bg");
+    }
+    function fadein_18() {
+      document.getElementById("t18").classList.add("fadein_bg");
+    }
+    function fadein_19() {
+      document.getElementById("t19").classList.add("fadein_bg");
+    }
+    function fadein_20() {
+      document.getElementById("t20").classList.add("fadein_bg");
+    }
+    function fadein_21() {
+      document.getElementById("t21").classList.add("fadein_bg");
+    }
+
+    function fadeout_master() {
+      document.getElementById("overall_text").classList.add("fadeout_txt");
+    }
+
+    function fadein_master() {
+      setTimeout(function() {
+        fadein_20();
+      }, 12000);
+      setTimeout(function() {
+        fadein_19();
+      }, 12000);
+      setTimeout(function() {
+        fadein_18();
+      }, 7000);
+      setTimeout(function() {
+        fadein_17();
+      }, 7000);
+      setTimeout(function() {
+        fadein_16();
+      }, 5000);
+      setTimeout(function() {
+        fadein_15();
+      }, 5000);
+      setTimeout(function() {
+        fadein_14();
+      }, 5000);
+      setTimeout(function() {
+        fadein_13();
+      }, 5000);
+      setTimeout(function() {
+        fadein_12();
+      }, 5000);
+      setTimeout(function() {
+        fadein_11();
+      }, 5000);
+      setTimeout(function() {
+        fadein_10();
+      }, 5000);
+      setTimeout(function() {
+        fadein_9();
+      }, 5000);
+      setTimeout(function() {
+        fadein_8();
+      }, 3000);
+      setTimeout(function() {
+        fadein_7();
+      }, 3000);
+      setTimeout(function() {
+        fadein_6();
+      }, 3000);
+      setTimeout(function() {
+        fadein_5();
+      }, 3000);
+      setTimeout(function() {
+        fadein_4();
+      }, 1000);
+      setTimeout(function() {
+        fadein_3();
+      }, 1000);
+      setTimeout(function() {
+        fadein_2();
+      }, 1000);
+      setTimeout(function() {
+        fadein_1();
+      }, 1000);
+    }
+
+    function text_function() {
+      setTimeout(function () {
+        fadein_master();
+      }, 300);
+      setTimeout(function() {
+        pop();
+      }, 20000);
+      setTimeout(function () {
+        fadein_bg();
+      }, 28000);
+    }
+
+  </script>
+
+</body>
+
+</html>
