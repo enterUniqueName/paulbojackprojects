@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Suck It Up</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='suck-it-up.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="project_container" class="project_container">
+
+    <div id="overall_text" class="overall_text">
+        <span id="t1">NOT</span>&nbsp;<span id="t2">FOR SALE</span>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+
+    //fadein functions for each word set
+    function fadeinall() {
+        document.getElementById("t1").classList.add("fadein_txt");
+        document.getElementById("t2").classList.add("fadein_txt");
+    }
+    function fadein_1() {
+        document.getElementById("t1").classList.add("fadein_txt");
+        document.getElementById("t2").classList.remove("green");
+        document.getElementById("t2").classList.add("fadein_txt");
+    }
+    function fadeout_1() {
+        document.getElementById("t1").classList.remove("fadein_txt");
+        document.getElementById("t2").classList.add("green");
+        document.getElementById("t2").classList.remove("fadein_txt");
+    }
+    function fadeoutall() {
+        document.getElementById("t1").classList.remove("fadein_txt");
+        document.getElementById("t2").classList.remove("fadein_txt");
+    }
+    function blackout() {
+        document.getElementById("project_container").classList.add("blackout");
+    }
+    function blackoutSlow() {
+        document.getElementById("project_container").classList.add("blackoutSlow");
+    }
+    //master fade function
+    function fadein_master() {
+        setTimeout(function() {
+            fadeinall();
+        }, 0)
+        setTimeout(function() {
+            fadeout_1();
+        }, 10000)
+        setTimeout(function() {
+            fadein_1();
+        }, 20000)
+        setTimeout(function() {
+            fadeout_1();
+        }, 30000)
+        setTimeout(function() {
+            fadein_1();
+        }, 40000)
+        setTimeout(function() {
+            fadeout_1();
+        }, 50000)
+        setTimeout(function() {
+            fadein_1();
+        }, 60000)
+        setTimeout(function() {
+            fadeout_1();
+        }, 70000)
+        setTimeout(function() {
+            fadein_1(); // Not For Sale
+        }, 80000)
+        setTimeout(function() {
+            fadeoutall();
+        }, 90000)
+        setTimeout(function() {
+            blackoutSlow();
+        }, 92000)
+    }
+
+    function fade_function() {
+      setTimeout(function() {
+        fadein_master();
+      }, 5000);
+    }
+
+  </script>
+
+</body>
+
+</html>

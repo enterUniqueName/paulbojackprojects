@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+.project_container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* text style & structuring */
+.overall_text {
+    font-size: 9em;
+    color: rgba(255,0,0,0);
+    -webkit-text-stroke: 6px navy;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overall_text span {
+    display: inline-block;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.blackout {
+    background-color: black;
+}
+
+/* animation */
+.green {
+    animation: blinking 1s steps(10, start) infinite;
+    transition: all 1s ease;
+    -webkit-text-stroke: 6px red;
+    transform: translateX(-180px);
+    opacity: 1 !important;
+}
+@keyframes blinking {
+    /* 99% {
+        visibility: visible;
+    } */
+    100% {
+        visibility: hidden;
+    }
+}
+
+.fadein_txt{
+    animation-name: fadein_txt;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.blackoutSlow{
+    animation-name: blackoutSlow;
+    background-color:black;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes blackoutSlow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
