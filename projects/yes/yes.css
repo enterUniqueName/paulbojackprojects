@@ -1,0 +1,65 @@
+@font-face {
+    font-family: ScriptFont;
+    src: url(fonts/SnellRoundhand-BoldScript.otf);
+}
+
+body { margin: 0; }
+
+.project_container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.blackout { background-color: black; }
+
+.overall_text { 
+    font-size: 14em;
+    font-family: ScriptFont;
+    letter-spacing: 0.25rem;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    z-index: -1;
+}
+
+.overall_text div {
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Animation */
+.fadein_txt {
+    animation-name: fadein_txt;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt {
+    0%   {opacity: 0;}
+    15%  {opacity: 100%;}
+    100% {opacity: 100%;}
+}
+.blackoutSlow{
+    animation-name: blackoutSlow;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes blackoutSlow {
+    0% {background: transparent;}
+    20% {background: black;}
+    80% {background: black;}
+    100% {background: transparent;}
+}
+.blackout {
+    transition: background-color 6s ease;
+    background-color: black !important;
+}
+.position_bottom {
+    top:75% !important;
+}
