@@ -1,0 +1,107 @@
+/* ------------- */
+/* Index Styling */
+/* ------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+html, body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 12px;
+}
+
+body {
+    margin: 24px;
+}
+
+h1 { font-size: 2em; }
+
+a  { 
+    color: white;
+    display: block;
+    margin-bottom: 2px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-bottom:24px;
+}
+
+p { margin: 0; }
+
+.credits {
+    position: absolute;
+    left: 24px;
+    bottom: 48px;
+}
+
+.copyright {
+    font-size:12px;
+    color: white;
+    margin-top: 6px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    margin-top: 6px;
+}
+
+/* Credits Page */
+.credits-section {
+    font-family: "Montserrat";
+}
+.credits-list p {
+    white-space: pre;
+}
+table td { 
+    padding: 0 12px 0 0;
+}
+
+/* POPUP LOGIN MODAL */
+#modal_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+#modal_window {
+    padding: 10px 20px;
+    background: #fff;
+    border: 5px solid #999;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+#modal_window #modal_feedback > * {
+    display: block;
+}
+#modal_window #modal_feedback :not(:last-child) {
+    margin-bottom:12px;
+}
+#modal_window .no-password {
+    color: maroon;
+    position:absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.login {
+    position:absolute;
+    right: 36px;
+    top: 36px;
+}

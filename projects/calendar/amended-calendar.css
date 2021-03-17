@@ -1,0 +1,117 @@
+#calendar_container {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 4em;
+}
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 0.5fr repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: calc(100vw - 8em);
+    height: calc(100vh - 8em);
+    color: black;
+    /* corner line color */
+    /* stroke: black; */
+}
+.cal-grid > * {
+    border: 0.5px solid;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.cal-grid .day {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1.5px;
+}
+
+.cal-grid > *:not(.day) {
+    padding:0.5rem;
+}
+
+.no-border.l{
+    border-left: none;
+}
+.no-border.r{
+    border-right: none;
+}
+.no-border.t{
+    border-top: none;
+}
+.no-border.b{
+    border-bottom: none;
+}
+/* Corners
+.no-border-lr {
+    border-left: none;
+    border-right: none;
+}
+.no-border-tb {
+    border-top: none;
+    border-bottom: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+line {
+    stroke-width: 2;
+}
+*/
+
+
+
+
+
+.cal-grid-animation {
+    animation-name: color-one, color-two, color-three, color-four, color-one, color-two, color-three, color-four;
+    animation-duration: 5s, 5s, 5s, 5s, 5s, 5s, 5s, 5s;
+    animation-delay: 10s, 25s, 40s, 55s, 70s, 85s, 100s, 115s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* Animation */
+.fadein_bg {
+    animation-name: fadein_bg;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_bg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes color-one {
+    from { color: black; stroke: black; }
+    to   { color: #112F24; stroke: #112F24; }
+}
+@keyframes color-two {
+    from { color: #112F24; stroke: #112F24; }
+    to   { color: Black; stroke: Black; }
+}
+@keyframes color-three {
+    from { color: Black; stroke: Black; }
+    to   { color: #3EB489; stroke: #3EB489; }
+}
+@keyframes color-four {
+    from { color: #3EB489; stroke: #3EB489; }
+    to   { color: black; stroke: black; }
+}
+.blackout {
+    transition: background-color 6s ease;
+    background-color: black;
+}

@@ -1,0 +1,143 @@
+#calendar_container {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 4em;
+}
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 0.5fr repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: calc(100vw - 8em);
+    height: calc(100vh - 8em);
+    opacity: 1;
+    /* corner line color */
+    /* stroke: black; */
+}
+.cal-grid > * {
+    border: 0.5px solid;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    border-color: currentColor;
+}
+
+.cal-grid .day {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1.5px;
+}
+
+.cal-grid > *:not(.day) {
+    padding:0.5rem;
+}
+
+.no-border.l{
+    border-left: none;
+}
+.no-border.r{
+    border-right: none;
+}
+.no-border.t{
+    border-top: none;
+}
+.no-border.b{
+    border-bottom: none;
+}
+/* Corners
+.no-border-lr {
+    border-left: none;
+    border-right: none;
+}
+.no-border-tb {
+    border-top: none;
+    border-bottom: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+line {
+    stroke-width: 2;
+}
+*/
+
+svg {
+    position: absolute;
+    max-height: 90%;
+}
+
+
+
+
+
+.cal-grid-animation {
+    animation-name: purple, royal, navy, black;
+    animation-duration: 2s, 2s, 2s, 2s;
+    animation-delay: 0.01s, 5.2s, 10.4s, 15.6s;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* Animation */
+.fadein_bg {
+    animation-name: fadein_bg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_bg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes purple {
+    from { color: black; stroke: black; }
+    to   { color: #2A082B; stroke: #2A082B; }
+}
+@keyframes royal {
+    from { color: #2A082B; stroke: #2A082B; }
+    to   { color: #02274B; stroke: #02274B; }
+}
+@keyframes navy {
+    from { color: #02274B; stroke: #02274B; }
+    to   { color: #F58320; stroke: #F58320; }
+}
+@keyframes black {
+    from { color: #F58320; stroke: #F58320; }
+    to   { color: black; stroke: black; }
+}
+.blackout {
+    transition: background-color 6s ease;
+    background-color: black;
+}
+.blackout-override {
+    background-color: black;
+    transition: background-color 6s ease;
+}
+.blackout-grid-override {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.cal-grid,
+.content {
+    transition: opacity 3s ease;
+}
+.border-color {
+    border-color: currentColor;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: You Are Special</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='no-one-like-me.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+
+    <video id="videoEmbed" class="videoEmbed" preload>
+      <source src="endVid_Edit.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="diamond" class="diamond" preload>
+      <source src="Diamond.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="diamond" class="diamond" ></div>
+
+    <div id="overall_text" class="overall_text">
+        <div id="t1">Don't Ever Forget</div>
+        <div id="t2">That You Are Special</div>
+        <div id="t3">Just Like Everyone Else</div>
+    </div>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src='no-one-like-me.js'></script>
+
+</body>
+
+</html>

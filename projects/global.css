@@ -1,0 +1,43 @@
+/* ------------------------------ */
+/* Global Styles for each project */
+/* ------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto';
+    overflow: hidden;
+    background-color: #333333;
+}
+
+/* style: home button */
+.home a {
+    position: absolute;
+    top: 1%;
+    color: white;
+    opacity: 0.5;
+    z-index: 999;
+    text-shadow: 2px 2px 3px black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* style: camera */
+.cam_container {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1;
+}
+.cam_element {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

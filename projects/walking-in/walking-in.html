@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Walking In</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='walking-in.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="project_container" class="project_container">
+
+    <div id="overall_text" class="overall_text">
+        <div id="t1">OVERRATED</div>
+        <div id="t2">UNDERRATED</div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+
+    //fadein functions for each word set
+    function fadein_1() {
+        document.getElementById("t1").classList.add("fadein_txt");
+        document.getElementById("t2").classList.remove("fadein_txt");
+    }
+    function fadein_2() {
+        document.getElementById("t1").classList.remove("fadein_txt");
+        document.getElementById("t2").classList.add("fadein_txt");
+    }
+    function fadeoutall() {
+        document.getElementById("t1").classList.remove("fadein_txt");
+        document.getElementById("t2").classList.remove("fadein_txt");
+    }
+    function blackoutSlow() {
+        document.getElementById("project_container").classList.add("blackoutSlow");
+    }
+    function angleText() {
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var atan = Math.atan(h/w);
+        var pi = Math.PI;
+        var rotation = atan * (180/pi)
+
+
+        var textOne = document.getElementById("t1");
+        var textTwo = document.getElementById("t2");
+
+        textOne.style.transform = "rotate(" + rotation +"deg)";
+        textTwo.style.transform = "rotate(-" + rotation +"deg)";
+    }
+    //master fade function
+    function fadein_master() {
+        setTimeout(function() {
+            fadein_1();
+        }, 0)
+        setTimeout(function() {
+            fadein_2();
+        }, 7000)
+        setTimeout(function() {
+            fadein_1();
+        }, 14000)
+        setTimeout(function() {
+            fadein_2();
+        }, 21000)
+        setTimeout(function() {
+            fadein_1();
+        }, 28000)
+        setTimeout(function() {
+            fadein_2();
+        }, 35000)
+        setTimeout(function() {
+            fadein_1();
+        }, 42000)
+        setTimeout(function() {
+            fadein_2();
+        }, 49000)
+        setTimeout(function() {
+            fadeoutall();
+            blackoutSlow();
+        }, 56000)
+    }
+
+    function fade_function() {
+      angleText();
+      setTimeout(function() {
+        fadein_master();
+      }, 5000);
+    }
+
+    window.onresize = angleText;
+
+  </script>
+
+</body>
+
+</html>

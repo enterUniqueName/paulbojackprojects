@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: February Christmas</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='february-christmas.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+
+
+
+    <video id="treeVid" class="treeVid videoEmbed" preload muted>
+      <source src="assets/TreeRedLights-Edit.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video id="handsOldVid" class="handsOldVid videoEmbed" preload muted>
+      <source src="assets/Hands-OldEdit.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video id="bloodVid" class="bloodVid videoEmbed" preload muted>
+      <source src="assets/BloodTest-Edit.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video id="handsYoungVid" class="handsYoungVid videoEmbed" preload muted>
+      <source src="assets/Hands-YoungEdit.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video id="iceVid" class="iceVid videoEmbed" preload muted>
+      <source src="assets/Originals/IceCracking.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    
+
+    <div id="overall_text" class="overall_text">
+        <!-- Nothing Text in this Project -->
+    </div>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src='february-christmas.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: We Came</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='we-came.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="project_container" class="project_container">
+
+    <div id="overall_text" class="overall_text">
+        <div id="line1">
+            <span>We came</span>
+        </div>
+        <div id="line2">
+            <span>without knowing why we'll leave</span>
+        </div>
+        <div id="line3">
+            <span>lost our feelings</span>
+        </div>
+        <div id="line4">
+            <span>without knowing why we loved</span>
+        </div>
+        <div id="line5">
+            <span>lost our bodies</span>
+        </div>
+        <div id="line6">
+            <span>without knowing why we lived</span>
+        </div>
+        <div id="line7">
+            <span>and we leave</span>
+        </div>
+        <div id="line8">
+            <span>without knowing why we came</span>
+        </div>
+    </div>
+
+    <iframe
+        id="youtube_container"
+        style="pointer-events: none; opacity:0;"
+        src="https://www.youtube.com/embed/NaYILo6O2Bk?rel=0&controls=0&autoplay=1&mute=1" 
+        frameborder="0" 
+        allow="autoplay" 
+        allowfullscreen>
+    </iframe>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+    function blackoutSlow() {
+        document.getElementById("project_container").classList.add("blackoutSlow");
+        document.getElementById("youtube_container").style.opacity = "0";
+    }
+
+    function fadeYoutube() {
+        document.getElementById("youtube_container").style.opacity = "1";
+    }
+
+    function backToCam() {
+        document.getElementById("project_container").classList.remove("blackout");
+        document.getElementById("line1").classList.remove("fadein_txt");
+        document.getElementById("line2").classList.remove("fadein_txt_slow");
+        document.getElementById("line3").classList.remove("fadein_txt");
+        document.getElementById("line4").classList.remove("fadein_txt_slow");
+        document.getElementById("line5").classList.remove("fadein_txt");
+        document.getElementById("line6").classList.remove("fadein_txt_slow");
+        document.getElementById("line7").classList.remove("fadein_txt");
+        document.getElementById("line8").classList.remove("fadein_txt_slow");
+    }
+
+    function fadein_1() {
+        document.getElementById("line1").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+
+    function fadein_2() {
+        document.getElementById("line2").classList.add("fadein_txt_slow");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_3() {
+        document.getElementById("line3").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_4() {
+        document.getElementById("line4").classList.add("fadein_txt_slow");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_5() {
+        document.getElementById("line5").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_6() {
+        document.getElementById("line6").classList.add("fadein_txt_slow");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_7() {
+        document.getElementById("line7").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_8() {
+        document.getElementById("line8").classList.add("fadein_txt_slow");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    
+    function fadein_master() {
+
+        setTimeout(function() {
+            fadein_1();
+        }, 0);
+
+        setTimeout(function() {
+            backToCam();
+        }, 4000);
+
+        setTimeout(function() {
+            fadein_2();
+        }, 6500);
+
+        setTimeout(function() {
+            backToCam();
+        }, 12500);
+
+        setTimeout(function() {
+            fadein_3();
+        }, 15500);
+
+        setTimeout(function() {
+            backToCam();
+        }, 19500);
+
+        setTimeout(function() {
+            fadein_4();
+        }, 22000);
+
+        setTimeout(function() {
+            backToCam();
+        }, 28000);
+
+        setTimeout(function() {
+            fadein_5();
+        }, 31000);
+
+        setTimeout(function() {
+            backToCam();
+        }, 35000);
+
+        setTimeout(function() {
+            fadein_6();
+        }, 37500);
+
+        setTimeout(function() {
+            backToCam();
+        }, 43500);
+
+        setTimeout(function() {
+            fadein_7();
+        }, 46500);
+
+        setTimeout(function() {
+            backToCam();
+        }, 50500);
+
+        setTimeout(function() {
+            fadein_8();
+        }, 53000);
+        // minus half second
+
+        setTimeout(function() {
+            backToCam();
+        }, 59000);
+
+        setTimeout(function() {
+            fadeYoutube();
+        }, 62000);
+
+        setTimeout(function() {
+            blackoutSlow();
+        }, 67000);
+    }
+
+    function fade_function() {
+        setTimeout(function () {
+            fadein_master();
+        }, 7000);
+    }
+
+  </script>
+
+</body>
+
+</html>

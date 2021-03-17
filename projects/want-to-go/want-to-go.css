@@ -1,0 +1,25 @@
+.project_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+}
+
+.slowfade {
+    animation-name: fadein_bg;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_bg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fastfade {
+    opacity: 1;
+}

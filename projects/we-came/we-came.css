@@ -1,0 +1,112 @@
+body { margin: 0; }
+
+.project_container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.blackout { background-color: black; }
+
+.overall_text { 
+    color: cornflowerblue; 
+    font-size: 14px;
+}
+
+.overall_text div {
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.5em;
+}
+
+
+/* Line 1 */
+.overall_text #line1 { top:25%; left:2%; }
+
+/* Line 2 */
+.overall_text #line2 { top:75%; right:10%; }
+
+/* Line 3 */
+.overall_text #line3 { top:5%; left:5%; }
+
+/* Line 4 */
+.overall_text #line4 { top:80%; left:2%; }
+
+/* Line 5 */
+.overall_text #line5 { top:45%; left:2%; }
+
+/* Line 6 */
+.overall_text #line6 { top:35%; right:2%; }
+
+/* Line 7 */
+.overall_text #line7 { top:95%; left:37%; }
+
+/* Line 8 */
+.overall_text #line8 { top:5%; left:40%; }
+
+iframe {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 120px);
+    transition: opacity 5s ease;
+}
+
+
+
+
+/* Animation */
+.popin_txt{
+    animation-name: popin_txt;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes popin_txt {
+    0%   {opacity: 100%;}
+    80%  {opacity: 100%;}
+    100% {opacity: 0;}
+}
+.fadein_txt {
+    animation-name: fadein_txt;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt {
+    0%   {opacity: 0;}
+    30%  {opacity: 100%;}
+    75%  {opacity: 100%;}
+    100% {opacity: 0;}
+}
+.fadein_txt_stay {
+    animation-name: fadein_txt_stay;
+    animation-duration: 13s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt_stay {
+    0%   {opacity: 0;}
+    10%  {opacity: 100%;}
+    90%  {opacity: 100%;}
+    100% {opacity: 0;}
+}
+.fadein_txt_slow {
+    animation-name: fadein_txt;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt_slow {
+    0%   {opacity: 0;}
+    20%  {opacity: 100%;}
+    80%  {opacity: 100%;}
+    100% {opacity: 0;}
+}
+.blackoutSlow{
+    /* animation-name: blackoutSlow; */
+    background-color:black;
+    /* animation-duration: 3s; */
+    /* animation-fill-mode: forwards; */
+}
+@keyframes blackoutSlow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
