@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: After Its Too Late</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='too-late.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="project_container" class="project_container">
+
+    <div id="overall_text" class="overall_text">
+        <div id="line1">
+            <span id="line1word1">No</span>
+            <span id="line1word2">need</span>
+            <span id="line1word3">to</span>
+            <span id="line1word4">be</span>
+            <span id="line1word5">bored</span>
+        </div>
+        <div id="line2">
+            <span id="line2word1">Time</span>
+            <span id="line2word2">goes</span>
+            <span id="line2word3">by</span>
+            <span id="line2word4">too</span>
+            <span id="line2word5">fast</span>
+        </div>
+        <div id="line3">
+            <span id="line3word1">Go</span>
+            <span id="line3word2">and</span>
+            <span id="line3word3">wash</span>
+            <span id="line3word4">your</span>
+            <span id="line3word5">words</span>
+        </div>
+        <div id="line4">
+            <span id="line4word1">Go</span>
+            <span id="line4word2">and</span>
+            <span id="line4word3">rinse</span>
+            <span id="line4word4">your</span>
+            <span id="line4word5">heart</span>
+        </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+
+    //fade in for background
+    function fadein_bg() {
+        document.getElementById("project_container").classList.add("fadein_bg");
+    }
+    function fadeout_bg() {
+        document.getElementById("project_container").classList.remove("fadein_bg");
+    }
+    function orangeoutSlow() {
+        document.getElementById("project_container").classList.add("orangeoutSlow");
+    }
+
+    // Fade in for text
+    function fadeLineOne() {
+    
+        var line1 = document.getElementById("line1");
+
+        var child = line1.querySelectorAll("span");
+
+        fadein_bg();
+
+        setTimeout(function() {
+            child[0].classList.add("popin_txt");
+        }, 500);
+
+        setTimeout(function() {
+            child[1].classList.add("popin_txt");
+        }, 2000);
+
+        setTimeout(function() {
+            child[2].classList.add("popin_txt");
+        }, 3500);
+
+        setTimeout(function() {
+            child[3].classList.add("popin_txt");
+        }, 5000);
+
+        setTimeout(function() {
+            child[4].classList.add("popin_txt");
+        }, 6500);
+
+        setTimeout(function() {
+            fadeout_bg();
+        }, 8000);
+    }
+    function fadeLineTwo() {
+    
+        var line2 = document.getElementById("line2");
+
+        var child = line2.querySelectorAll("span");
+
+        fadein_bg();
+
+        setTimeout(function() {
+            child[0].classList.add("popin_txt");
+        }, 500);
+
+        setTimeout(function() {
+            child[1].classList.add("popin_txt");
+        }, 2000);
+
+        setTimeout(function() {
+            child[2].classList.add("popin_txt");
+        }, 3500);
+
+        setTimeout(function() {
+            child[3].classList.add("popin_txt");
+        }, 5000);
+
+        setTimeout(function() {
+            child[4].classList.add("popin_txt");
+        }, 6500);
+
+        setTimeout(function() {
+            fadeout_bg();
+        }, 8000);
+    }
+    function fadeLineThree() {
+    
+        var line3 = document.getElementById("line3");
+
+        var child = line3.querySelectorAll("span");
+
+        fadein_bg();
+
+        setTimeout(function() {
+            child[0].classList.add("popin_txt");
+        }, 0);
+
+        setTimeout(function() {
+            child[1].classList.add("popin_txt");
+        }, 2000);
+
+        setTimeout(function() {
+            child[2].style.transition = "opacity 1s linear 0s";
+            child[2].style.opacity = 1;
+        }, 3500);
+
+        setTimeout(function() {
+            child[3].style.transition = "opacity 1s linear 0s";
+            child[3].style.opacity = 1;
+        }, 6500);
+
+        setTimeout(function() {
+            child[4].style.transition = "opacity 1s linear 0s";
+            child[4].style.opacity = 1;
+        }, 9500);
+
+        setTimeout(function() {
+            child[2].style.transition = "opacity 3s linear 0s";
+            child[3].style.transition = "opacity 3s linear 0s";
+            child[4].style.transition = "opacity 3s linear 0s";
+            child[2].style.opacity = 0;
+            child[3].style.opacity = 0;
+            child[4].style.opacity = 0;
+        }, 12500);
+
+        setTimeout(function() {
+            fadeout_bg();
+        }, 15500);
+    }
+    function fadeLineFour() {
+    
+        var line4 = document.getElementById("line4");
+
+        var child = line4.querySelectorAll("span");
+
+        fadein_bg();
+
+        setTimeout(function() {
+            child[0].classList.add("popin_txt");
+        }, 0);
+
+        setTimeout(function() {
+            child[1].classList.add("popin_txt");
+        }, 2000);
+
+        setTimeout(function() {
+            child[2].style.transition = "opacity 1s linear 0s";
+            child[2].style.opacity = 1;
+        }, 3500);
+
+        setTimeout(function() {
+            child[3].style.transition = "opacity 1s linear 0s";
+            child[3].style.opacity = 1;
+        }, 6500);
+
+        setTimeout(function() {
+            child[4].style.transition = "opacity 1s linear 0s";
+            child[4].style.opacity = 1;
+        }, 9500);
+
+        setTimeout(function() {
+            child[2].style.transition = "opacity 6s linear 0s";
+            child[3].style.transition = "opacity 6s linear 0s";
+            child[4].style.transition = "opacity 6s linear 0s";
+            child[2].style.opacity = 0;
+            child[3].style.opacity = 0;
+            child[4].style.opacity = 0;
+        }, 12500);
+
+        // setTimeout(function() {
+        //     orangeoutSlow();
+        // }, 15500);
+    }
+    
+    function fadein_master() {
+
+        setTimeout(function() {
+            fadeLineOne();
+        }, 0);
+
+        setTimeout(function() {
+            fadeLineTwo();
+        }, 12000);
+
+        setTimeout(function() {
+            fadeLineThree();
+        }, 24000);
+
+        setTimeout(function() {
+            fadeLineFour();
+        }, 42500);
+    }
+
+    function fade_function() {
+        setTimeout(function () {
+            fadein_master();
+        }, 7000);
+    }
+
+  </script>
+
+</body>
+
+</html>

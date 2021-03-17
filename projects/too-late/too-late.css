@@ -1,0 +1,90 @@
+/* style: text*/
+.project_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    background-color: black;
+    opacity: 0;
+}
+/* background fadein */
+.fadein_bg {
+    opacity: 1;
+}
+
+
+
+/* text style & structuring */
+.overall_text { color: #FF6213; }
+
+.overall_text div span {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.5em;
+}
+
+
+/* Line 1 */
+.overall_text #line1 span:nth-child(1) { top:40%; right:20%; }
+.overall_text #line1 span:nth-child(2) { top:90%; left:2%;   }
+.overall_text #line1 span:nth-child(3) { top:5%; left:2%;    }
+.overall_text #line1 span:nth-child(4) { top:50%; right:50%; }
+.overall_text #line1 span:nth-child(5) { top:90%; right:2%;  }
+
+/* Line 2 */
+.overall_text #line2 span:nth-child(1) { top:90%; right:20%; }
+.overall_text #line2 span:nth-child(2) { top:5%; right:10%;   }
+.overall_text #line2 span:nth-child(3) { top:40%; left:70%;    }
+.overall_text #line2 span:nth-child(4) { top:5%; left:2%; }
+.overall_text #line2 span:nth-child(5) { top:90%; left:2%;  }
+
+/* Line 3 */
+.overall_text #line3 span:nth-child(1) { top:50%; left:50%; }
+.overall_text #line3 span:nth-child(2) { top:95%; left:50%;   }
+.overall_text #line3 span:nth-child(3) { top:5%; left:50%;    }
+.overall_text #line3 span:nth-child(4) { top:80%; right:75%; }
+.overall_text #line3 span:nth-child(5) { top:20%; right:10%;  }
+
+/* Line 4 */
+.overall_text #line4 span:nth-child(1) { top:50%; left:50%; }
+.overall_text #line4 span:nth-child(2) { top:90%; right:5%;   }
+.overall_text #line4 span:nth-child(3) { top:10%; left:70%;    }
+.overall_text #line4 span:nth-child(4) { top:75%; left:15%; }
+.overall_text #line4 span:nth-child(5) { top:40%; left:70%;  }
+
+.fadein_txt {
+    animation-name: fadein_txt;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein_txt {
+    0%   {opacity: 0;}
+    100%  {opacity: 100%;}
+}
+
+.popin_txt{
+    animation-name: popin_txt;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes popin_txt {
+    0% {opacity: 0;}
+    1% {opacity: 1;}
+    99% {opacity: 1}
+    100% {opacity: 0;}
+}
+
+.orangeoutSlow{
+    animation-name: orangeoutSlow;
+    background-color:#CB5C0D;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes orangeoutSlow {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
