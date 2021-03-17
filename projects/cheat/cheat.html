@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Cheat</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='cheat.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="fade_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen" style='opacity: 0;'></div>
+
+    <video id="videoEmbed" class="videoEmbed" preload style="opacity: 0;">
+      <source src="Hot_Dog_and_Ketchup.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="overall_text" class="overall_text">
+        <div id="t1">ALWAYS</div>
+        <div id="t2">CUM</div>
+        <div id="t3">PETE</div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+
+    //fadein functions for each word set
+    function fadein_1() {
+        document.getElementById("t1").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_2() {
+        document.getElementById("t2").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadein_3() {
+        document.getElementById("t3").classList.add("fadein_txt");
+        document.getElementById("project_container").classList.add("blackout")
+    }
+    function fadeoutall() {
+        document.getElementById("t1").classList.remove("fadein_txt");
+        document.getElementById("t2").classList.remove("fadein_txt");
+        document.getElementById("t3").classList.remove("fadein_txt");
+        document.getElementById("project_container").classList.remove("blackout")
+
+    }
+
+    const videoEmbed = document.getElementById('videoEmbed');
+    const blackscreen = document.getElementById('blackscreen');
+    //master fade function
+    function fade_function() {
+        setTimeout(function() {
+            fadein_1();
+        }, 7000)
+        setTimeout(function() {
+            fadeoutall();
+        }, 9000)
+        setTimeout(function() {
+            fadein_2();
+        }, 11000)
+        setTimeout(function() {
+            fadeoutall();
+        }, 13000)
+        setTimeout(function() {
+            fadein_3();
+        }, 15000)
+        setTimeout(function() {
+            fadeoutall();
+        }, 17000)
+        setTimeout(function() {
+          videoEmbed.style.transition = 'opacity 3s ease';
+          videoEmbed.style.opacity = '0.4';
+            videoEmbed.play();
+        }, 20000)
+        setTimeout(function() {
+            blackscreen.style.transition = 'opacity 3s ease';
+            blackscreen.style.opacity = '1';
+        }, 25000)
+    }
+
+  </script>
+
+</body>
+
+</html>
