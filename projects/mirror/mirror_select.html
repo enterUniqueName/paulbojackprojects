@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Select Your Mirror</title>
+  
+  <link href='../global.css' rel='stylesheet'>
+  <link href='../../index.css' rel='stylesheet'>
+
+  <style>
+
+    .show {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 15em;
+      color: red;
+      background: transparent;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+
+</head>
+
+<body id="mirror_body">
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <h1>Select Your Mirror</h1>
+  <h2>&nbsp;</h2><!--Placeholder-->
+
+  <a href="mirror1.html">Mirror 1</a><br>
+  <a href="mirror2.html">Mirror 2</a><br>
+  <a href="mirror3.html">Mirror 3</a><br>
+  <a href="mirror4.html">Mirror 4</a><br>
+  <!-- <a onclick="alert('Liar')"><u>Mirror 5 [None of the Above]</u></a><br> -->
+  <a onclick="myFunction()"><u>Mirror 5 [None of the Above]</u></a><br>
+
+  <div id="js-liar" style="display: none;">LIAR</div>
+
+  <script>
+
+    function myFunction() {
+      document.getElementById("js-liar").classList.add("show");
+      setTimeout(function() {
+        document.getElementById("js-liar").classList.remove("show");;
+      }, 250)
+    }
+
+  </script>
+
+</body>
+
+</html>

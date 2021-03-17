@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Mirror 2</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='mirror.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="mirror_select.html" class="home">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="text_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="text_container">
+
+    <div id="overall_text">
+
+      <span id="t1">B</span><span id="t2">I</span><span id="t3">G</span><span id="t4">O</span><span id="t5">T</span>
+
+    </div>
+
+  </div>
+  
+  
+  
+  
+  
+  <script>
+    
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+    
+    //project specific scripts
+    function fadein_1() {
+      document.getElementById("t1").classList.add("fadein_txt");
+    }
+    function fadein_2() {
+      document.getElementById("t2").classList.add("fadein_txt");
+    }
+    function fadein_3() {
+      document.getElementById("t3").classList.add("fadein_txt");
+    }
+    function fadein_4() {
+      document.getElementById("t4").classList.add("fadein_txt");
+    }
+    function fadein_5() {
+      document.getElementById("t5").classList.add("fadein_txt");
+    }
+    function fadein_6() {
+      document.getElementById("t6").classList.add("fadein_txt");
+    }
+
+    //master text func.
+    function text_master() {
+      setTimeout(function() {
+        fadein_1();
+      }, 0)
+      setTimeout(function() {
+        fadein_2();
+      }, 500)
+      setTimeout(function() {
+        fadein_3();
+      }, 1000)
+      setTimeout(function() {
+        fadein_4();
+      }, 1500)
+      setTimeout(function() {
+        fadein_5();
+      }, 2000)
+    }
+
+    function text_function() {
+      setTimeout(function() {
+        text_master();
+      }, 4000);
+    }
+
+  </script>
+
+</body>
+
+</html>
