@@ -141,3 +141,10 @@ svg {
 .border-color {
     border-color: currentColor;
 }
+.flip {
+    transform: scaleX(-1);
+    display:inline-block;
+}
+.zero {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, 70% 50%, 70% 44%, 100% 44%, 100% 0);
+}
