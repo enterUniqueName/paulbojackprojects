@@ -300,20 +300,24 @@
       }, 89000);
       setTimeout(function () {
         // clearTimeout(timer2);
+        let arr = number_array;
+        console.log(arr);
 
-        let arr = number_array
-        for( var i = 0; i < arr.length; i++){ 
-          if ( arr[i] === '') { 
-            arr.splice(i, 1); 
+        const result = arr.filter(
+          function(x) {
+            return x !== "";
           }
-        }
-        console.log(number_array)
+        );
+          
+        console.log(result);
+
+        number_array = result;
 
         number_array.push(
           "<span>3</span>" + "<span class='flip'>3</span>", 
           '99', 
           "<span>3</span>" + "<span class='flip'>7</span>", 
-          "<span class='zero'>0</span>" + "<span class='zero'>0</span>"
+          "<span class='zero-left'>0</span>" + "<span class='zero-right'>0</span>"
         );
 
         number_array.push('Thursday', 'Monday', 'Sunday', 'Tuesday', 'Saturday', 'Friday', 'Wednesday');
