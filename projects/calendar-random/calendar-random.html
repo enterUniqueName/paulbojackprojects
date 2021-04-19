@@ -208,6 +208,30 @@
       for(var i = 0; i < borders.length; i++){
         borders[i].style.color = color;
       }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+    function randomizer2_flip(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.add('flip');
+      }
       shuffle(number_array);
       shuffle(day_array);
       assign_dates();
@@ -224,6 +248,30 @@
       }
       for(var i = 0; i < borders.length; i++){
         borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days_as_numbers();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+    function randomizer3_flip(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.add('flip');
       }
       shuffle(number_array);
       shuffle(day_array);
@@ -251,16 +299,16 @@
     function addBlanksTimer() {
       console.log('start timer 2');
       //To account for overlap, adding orange at the beginning, basically as a spacer, but also changing the color rotation.
-      setTimeout(randomizer2, 0, "#FF5500"); //Orange
+      setTimeout(randomizer2_flip, 0, "#FF5500"); //Orange
       setTimeout(randomizer2, 10670, "#1313AE"); //Blue
-      setTimeout(randomizer2, 21340, "#FFF200"); //Yellow
+      setTimeout(randomizer2_flip, 21340, "#FFF200"); //Yellow
       setTimeout(randomizer2, 32010, "#4112CA"); //Purple
       // Removing infinite loop, hard coding times for next run
-      setTimeout(randomizer2, 42680, "#FF5500"); //Orange
+      setTimeout(randomizer2_flip, 42680, "#FF5500"); //Orange
       setTimeout(randomizer2, 53350, "#1313AE"); //Blue
-      setTimeout(randomizer2, 64020, "#FFF200"); //Yellow
+      setTimeout(randomizer2_flip, 64020, "#FFF200"); //Yellow
       setTimeout(randomizer2, 74690, "#4112CA"); //Purple
-      setTimeout(randomizer2, 85360, "#FF5500"); //Orange
+      setTimeout(randomizer2_flip, 85360, "#FF5500"); //Orange
       setTimeout(randomizer2, 96030, "#1313AE"); //Blue
       // timer2 = setTimeout(addBlanksTimer, 42680);
     }
@@ -268,18 +316,18 @@
     function addTextTimer() {
       console.log('start timer 3');
       //To account for overlap, adding starting with yellow at the beginning, changing the color rotation.
-      setTimeout(randomizer3, 0, "#FFF200"); //Yellow
+      setTimeout(randomizer3_flip, 0, "#FFF200"); //Yellow
       setTimeout(randomizer3, 10670, "#4112CA"); //Purple
-      setTimeout(randomizer3, 21340, "#FF5500"); //Orange
+      setTimeout(randomizer3_flip, 21340, "#FF5500"); //Orange
       setTimeout(randomizer3, 32010, "#1313AE"); //Blue
       // Removing infinite loop, hard coding times for next run
-      setTimeout(randomizer3, 42680, "#FFF200"); //Yellow
+      setTimeout(randomizer3_flip, 42680, "#FFF200"); //Yellow
       setTimeout(randomizer3, 53350, "#4112CA"); //Purple
-      setTimeout(randomizer3, 64020, "#FF5500"); //Orange
+      setTimeout(randomizer3_flip, 64020, "#FF5500"); //Orange
       setTimeout(randomizer3, 74690, "#1313AE"); //Blue
-      setTimeout(randomizer3, 85360, "#FFF200"); //Yellow
+      setTimeout(randomizer3_flip, 85360, "#FFF200"); //Yellow
       setTimeout(randomizer3, 96030, "#4112CA"); //Purple
-      setTimeout(randomizer3, 106700, "#FF5500"); //Orange
+      setTimeout(randomizer3_flip, 106700, "#FF5500"); //Orange
       //timer3 = setTimeout(addTextTimer, 42680);
     }
 
@@ -314,13 +362,15 @@
         number_array = result;
 
         number_array.push(
-          "<span>3</span>" + "<span class='flip'>3</span>", 
+          // "<span>3</span>" + "<span class='flip'>3</span>",
+          '33',
           '99', 
-          "<span>3</span>" + "<span class='flip'>7</span>", 
+          '77',
+          // "<span>7</span>" + "<span class='flip'>7</span>", 
           "<span class='zero-left'>0</span>" + "<span class='zero-right'>0</span>"
         );
 
-        number_array.push('Thursday', 'Monday', 'Sunday', 'Tuesday', 'Saturday', 'Friday', 'Wednesday');
+        number_array.push('THURSDAY', 'MONDAY', 'SUNDAY', 'TUESDAY', 'SATURDAY', 'FRIDAY', 'WEDNESDAY');
         fadein_bg();
         addTextTimer();
       }, 196000);

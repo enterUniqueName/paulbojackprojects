@@ -1,6 +1,6 @@
 var number_array = [17, 24, 13, 6, 15, 30, 3, 19, 27, 4, 31, 12, 1, 20, 23, 5, 18, 29, 7, 10, 26, 14, 25, 9, 28, 16, 8, 22, 2, 11, 21]
 
-var day_array = ['Thursday', 'Monday', 'Sunday', 'Tuesday', 'Saturday', 'Friday', 'Wednesday']
+var day_array = ['THURSDAY', 'MONDAY', 'SUNDAY', 'TUESDAY', 'SATURDAY', 'FRIDAY', 'WEDNESDAY']
 
 function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {

@@ -35,7 +35,7 @@
     <div class="blackscreen" id="blackscreen" style='opacity: 0;'></div>
 
     <video id="videoEmbed" class="videoEmbed" preload style="opacity: 0;">
-      <source src="Hot_Dog_and_Ketchup.mov" type="video/mp4">
+      <source src="Hot_Dog_and_Ketchup.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -93,34 +93,38 @@
     const videoEmbed = document.getElementById('videoEmbed');
     const blackscreen = document.getElementById('blackscreen');
     //master fade function
+    const startGap = 4000;
+    const onScreenTwo = 2000;
+    const videoDuration = 8000;
+
     function fade_function() {
         setTimeout(function() {
             fadein_1();
-        }, 7000)
+        }, startGap)
         setTimeout(function() {
             fadeoutall();
-        }, 9000)
+        }, startGap + (onScreenTwo * 1))
         setTimeout(function() {
             fadein_2();
-        }, 11000)
+        }, startGap + (onScreenTwo * 2))
         setTimeout(function() {
             fadeoutall();
-        }, 13000)
+        }, startGap + (onScreenTwo * 3))
         setTimeout(function() {
             fadein_3();
-        }, 15000)
+        }, startGap + (onScreenTwo * 4))
         setTimeout(function() {
             fadeoutall();
-        }, 17000)
+        }, startGap + (onScreenTwo * 5))
         setTimeout(function() {
           videoEmbed.style.transition = 'opacity 3s ease';
           videoEmbed.style.opacity = '0.4';
             videoEmbed.play();
-        }, 19000)
+        }, startGap + (onScreenTwo * 6))
         setTimeout(function() {
             // blackscreen.style.transition = 'opacity 3s ease';
             blackscreen.style.opacity = '1';
-        }, 27000)
+        }, startGap + (onScreenTwo * 6) + videoDuration)
     }
 
   </script>
