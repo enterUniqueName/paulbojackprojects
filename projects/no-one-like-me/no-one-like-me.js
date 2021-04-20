@@ -40,14 +40,12 @@ const finalCutToBlack = fadeUpEmbed + onScreenTen;
 
 
 
-window.onload = function() {
-    blackscreen.style.opacity = "1";
-    text1.style.opacity = "0";
-    text2.style.opacity = "0";
-    text3.style.opacity = "0";
-    diamond.style.opacity = "0";
-    videoEmbed.style.opacity = "0";
-};
+blackscreen.style.opacity = "1";
+text1.style.opacity = "0";
+text2.style.opacity = "0";
+text3.style.opacity = "0";
+diamond.style.opacity = "0";
+videoEmbed.style.opacity = "0";
 
 //fadein functions for each word set
 function fadein_1() {
