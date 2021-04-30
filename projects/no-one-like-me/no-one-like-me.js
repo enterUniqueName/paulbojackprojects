@@ -9,14 +9,15 @@ const videoEmbed = document.getElementById("videoEmbed");
 
 const fade = 3000;
 const fade2 = 2000;
+const onScreenOne = 1000;
 const onScreenTwo = 2000;
 const onScreenTwoPointFive = 2500;
 const onScreenThree = 3000;
 const onScreenThreePointFive = 3500;
 // Stay on black for 1 seconds
 const openingGap = 1000;
-//then there is a 3 second fade in to text and text on screen for 2s
-const startFadeOut = openingGap + fade2 + onScreenTwo;
+//then there is a 3 second fade in to text and text on screen for 1s
+const startFadeOut = openingGap + fade2 + onScreenOne;
 // Allow for 3s fadeout, then cut to video
 const cutToVideo = startFadeOut + fade;
 // Stay on vid for 3 seconds, then cut to black and second word

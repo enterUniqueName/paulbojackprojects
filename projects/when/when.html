@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: February Christmas</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='when.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="master_animation()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+  <audio id="audioTrack" src="assets/Monologue audio (3)_Balanced levels_Dry.wav" preload>Your browser does not support the <code>audio</code> element.</audio>
+
+    <div id="overall_text" class="overall_text">
+        <!-- Nothing Text in this Project -->
+    </div>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src='when.js'></script>
+
+</body>
+
+</html>

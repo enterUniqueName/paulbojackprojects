@@ -9,14 +9,15 @@ const greenVid = document.getElementById("greenVid");
 const blueVid = document.getElementById("blueVid");
 const posterVid = document.getElementById("posterVid");
 const colorBurstVid = document.getElementById("colorBurstVid");
-const pigeonVid = document.getElementById("pigeonVid");
+// Pigeon is now CHAIR video
+const pigeonVid = document.getElementById("chairVid");
 const eyeCloseVid = document.getElementById("eyeCloseVid");
 
 const vidOpacity = "0.4";
 
 // Global Timing
 const fade = 2000;
-const viewerOnScreen = 2000;
+const viewerOnScreen = 1000;
 
 // Video Times
 // NOTES ON VIDEOS
@@ -34,10 +35,10 @@ const blueVidDuration = 11000 - fade;
 const posterVidDuration = 6120 - fade;
 // 7. colorBurstVid - edit down to 8 seconds - play first 5, then freeze for three
 const colorBurstVidDuration = 8000 - fade;
-// 8. pigeonVid - dont play video, just use the first frame as a freeze frame. let it run for 4 seconds.
+// 8. pigeonVid IS NOW CHAIR VID - edit down to 10 seconds flat
 const pigeonVidDuration = 10000 - fade;
 // 9. eyeCloseVid - edit down: from 3 second mark until after the eye closes. I chose to edit down to 5 total seconds, from the 2.20 mark. The const will have to be adjusted for when the eye starts to close.
-const eyeCloseVidDuration = 2560;
+const eyeCloseVidDuration = 2000;
 
 
 
