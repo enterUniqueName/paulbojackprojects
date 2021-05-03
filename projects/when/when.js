@@ -21,9 +21,10 @@ const cutToViewer2 = openingGap + 25500;
 const fadeToBlack2 = cutToViewer2 + viewerOnScreen;
 const cutToViewer3 = openingGap + 45000;
 const fadeToBlack3 = cutToViewer3 + viewerOnScreen;
-const cutToViewer4 = openingGap + 52000;
+const cutToViewer4 = openingGap + 55000;
 const addFrame = cutToViewer4 + viewerOnScreen;
-const finalFade = addFrame + 8000;
+const partialFade = addFrame + 8000;
+const finalFade = partialFade + 6000;
 
 function cut() {
     blackscreen.style.zIndex = "-2";
@@ -79,7 +80,12 @@ function master_animation() {
 
     setTimeout(function() {
         blackscreen.style.zIndex = "1";
-        blackscreen.style.transition = "opacity 6s ease";
+        blackscreen.style.transition = "opacity 3s ease";
+        blackscreen.style.opacity = "0.5";
+    }, partialFade)
+
+    setTimeout(function() {
+        blackscreen.style.transition = "opacity 0s linear";
         blackscreen.style.opacity = "1";
     }, finalFade)
 

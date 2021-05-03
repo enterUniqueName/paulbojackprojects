@@ -38,7 +38,7 @@ const colorBurstVidDuration = 8000 - fade;
 // 8. pigeonVid IS NOW CHAIR VID - edit down to 10 seconds flat
 const pigeonVidDuration = 10000 - fade;
 // 9. eyeCloseVid - edit down: from 3 second mark until after the eye closes. I chose to edit down to 5 total seconds, from the 2.20 mark. The const will have to be adjusted for when the eye starts to close.
-const eyeCloseVidDuration = 2000;
+const eyeCloseVidDuration = 3000;
 
 
 
@@ -136,7 +136,7 @@ function fade_function() {
     setTimeout(function() {
         colorBurstVid.style.opacity = "0";
         pigeonVid.play();
-        pigeonVid.style.opacity = "0.2";
+        pigeonVid.style.opacity = vidOpacity;
     }, fadeUpPigeon)
 
     setTimeout(function() {
