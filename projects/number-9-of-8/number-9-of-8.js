@@ -9,9 +9,10 @@ const greenVid = document.getElementById("greenVid");
 const blueVid = document.getElementById("blueVid");
 const posterVid = document.getElementById("posterVid");
 const colorBurstVid = document.getElementById("colorBurstVid");
-// Pigeon is now CHAIR video
-const pigeonVid = document.getElementById("chairVid");
+// Pigeon is now MOTEL  video
+const pigeonVid = document.getElementById("motelVid");
 const eyeCloseVid = document.getElementById("eyeCloseVid");
+const audioTrack = document.getElementById("audioTrack");
 
 const vidOpacity = "0.4";
 
@@ -35,8 +36,8 @@ const blueVidDuration = 11000 - fade;
 const posterVidDuration = 6120 - fade;
 // 7. colorBurstVid - edit down to 8 seconds - play first 5, then freeze for three
 const colorBurstVidDuration = 8000 - fade;
-// 8. pigeonVid IS NOW CHAIR VID - edit down to 10 seconds flat
-const pigeonVidDuration = 10000 - fade;
+// 8. pigeonVid IS NOW MOTEL VID - edit down to 8 seconds, starting at second 4
+const pigeonVidDuration = 8000 - fade;
 // 9. eyeCloseVid - edit down: from 3 second mark until after the eye closes. I chose to edit down to 5 total seconds, from the 2.20 mark. The const will have to be adjusted for when the eye starts to close.
 const eyeCloseVidDuration = 3000;
 
@@ -136,8 +137,26 @@ function fade_function() {
     setTimeout(function() {
         colorBurstVid.style.opacity = "0";
         pigeonVid.play();
+        audioTrack.volume = 0.2;
+        audioTrack.play();
         pigeonVid.style.opacity = vidOpacity;
     }, fadeUpPigeon)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.4;
+    }, fadeUpPigeon + 500)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.6;
+    }, fadeUpPigeon + 1000)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.8;
+    }, fadeUpPigeon + 1500)
+
+    setTimeout(function() {
+        audioTrack.volume = 1;
+    }, fadeUpPigeon + 2000)
 
     setTimeout(function() {
         pigeonVid.style.opacity = "0";
@@ -149,6 +168,23 @@ function fade_function() {
         blackscreen.style.transition = "opacity 0.5s ease";
         blackscreen.style.opacity = "1";
         blackscreen.style.zIndex = "1";
+        audioTrack.volume = 0.8;
     }, fadeToBlack)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.6;
+    }, fadeToBlack + 500)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.4;
+    }, fadeToBlack + 1000)
+
+    setTimeout(function() {
+        audioTrack.volume = 0.2;
+    }, fadeToBlack + 1500)
+
+    setTimeout(function() {
+        audioTrack.volume = 0;
+    }, fadeToBlack + 2000)
 
 }
