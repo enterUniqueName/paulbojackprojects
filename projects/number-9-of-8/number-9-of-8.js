@@ -139,7 +139,7 @@ function fade_function() {
         pigeonVid.play();
         audioTrack.volume = 0.2;
         audioTrack.play();
-        pigeonVid.style.opacity = "0.2";
+        pigeonVid.style.opacity = "0.55";
     }, fadeUpPigeon)
 
     setTimeout(function() {
