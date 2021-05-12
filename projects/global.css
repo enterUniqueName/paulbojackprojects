@@ -13,13 +13,19 @@ body {
 /* style: home button */
 .home a {
     position: absolute;
-    top: 1%;
+    top: 12px;
+    left: 12px;
     color: white;
-    opacity: 0.5;
+    opacity: 0.8;
     z-index: 999;
-    text-shadow: 2px 2px 3px black;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    line-height: 12px;
+    font-size: 24px;
+}
+.home a:hover {
+    opacity: 1;
 }
 
 /* style: camera */

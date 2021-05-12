@@ -37,7 +37,7 @@ const posterVidDuration = 6120 - fade;
 // 7. colorBurstVid - edit down to 8 seconds - play first 5, then freeze for three
 const colorBurstVidDuration = 8000 - fade;
 // 8. pigeonVid IS NOW MOTEL VID - edit down to 8 seconds, starting at second 4
-const pigeonVidDuration = 8000 - fade;
+const pigeonVidDuration = 7000 - fade;
 // 9. eyeCloseVid - edit down: from 3 second mark until after the eye closes. I chose to edit down to 5 total seconds, from the 2.20 mark. The const will have to be adjusted for when the eye starts to close.
 const eyeCloseVidDuration = 3000;
 
@@ -139,7 +139,7 @@ function fade_function() {
         pigeonVid.play();
         audioTrack.volume = 0.2;
         audioTrack.play();
-        pigeonVid.style.opacity = vidOpacity;
+        pigeonVid.style.opacity = "0.2";
     }, fadeUpPigeon)
 
     setTimeout(function() {

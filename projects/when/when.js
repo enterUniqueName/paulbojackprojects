@@ -81,7 +81,7 @@ function master_animation() {
     setTimeout(function() {
         blackscreen.style.zIndex = "1";
         blackscreen.style.transition = "opacity 0s ease";
-        blackscreen.style.opacity = "0.5";
+        blackscreen.style.opacity = "0.7";
     }, partialFade)
 
     setTimeout(function() {
