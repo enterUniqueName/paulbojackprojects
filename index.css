@@ -57,6 +57,10 @@ p { margin: 0; }
 .credits-section {
     font-family: "Montserrat";
 }
+.credits-list {
+    border-spacing: 12px;
+    margin-left: -12px;
+}
 .credits-list p {
     white-space: pre;
 }

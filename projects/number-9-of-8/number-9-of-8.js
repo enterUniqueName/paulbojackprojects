@@ -96,10 +96,13 @@ function fade_function() {
     eyeCloseVid.style.transition = "opacity 2s ease";
 
     setTimeout(function() {
-        musicTrack.play()
         eyeOpenVid.play()
         eyeOpenVid.style.opacity = vidOpacity;
     }, 0)
+
+    setTimeout(function() {
+        musicTrack.play()
+    }, 1500)
 
     setTimeout(function() {
         eyeOpenVid.style.transition = "opacity 0s linear";
