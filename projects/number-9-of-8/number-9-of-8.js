@@ -13,6 +13,7 @@ const colorBurstVid = document.getElementById("colorBurstVid");
 const pigeonVid = document.getElementById("motelVid");
 const eyeCloseVid = document.getElementById("eyeCloseVid");
 const audioTrack = document.getElementById("audioTrack");
+const musicTrack = document.getElementById("musicTrack");
 
 const vidOpacity = "0.4";
 
@@ -95,6 +96,7 @@ function fade_function() {
     eyeCloseVid.style.transition = "opacity 2s ease";
 
     setTimeout(function() {
+        musicTrack.play()
         eyeOpenVid.play()
         eyeOpenVid.style.opacity = vidOpacity;
     }, 0)
@@ -139,7 +141,7 @@ function fade_function() {
         pigeonVid.play();
         audioTrack.volume = 0.2;
         audioTrack.play();
-        pigeonVid.style.opacity = "0.65";
+        pigeonVid.style.opacity = "0.75";
     }, fadeUpPigeon)
 
     setTimeout(function() {
@@ -168,22 +170,27 @@ function fade_function() {
         blackscreen.style.transition = "opacity 0.5s ease";
         blackscreen.style.opacity = "1";
         blackscreen.style.zIndex = "1";
+        musicTrack.volume = 0.8;
         audioTrack.volume = 0.8;
     }, fadeToBlack)
 
     setTimeout(function() {
+        musicTrack.volume = 0.6;
         audioTrack.volume = 0.6;
     }, fadeToBlack + 500)
 
     setTimeout(function() {
+        musicTrack.volume = 0.4;
         audioTrack.volume = 0.4;
     }, fadeToBlack + 1000)
 
     setTimeout(function() {
+        musicTrack.volume = 0.2;
         audioTrack.volume = 0.2;
     }, fadeToBlack + 1500)
 
     setTimeout(function() {
+        musicTrack.volume = 0;
         audioTrack.volume = 0;
     }, fadeToBlack + 2000)
 
