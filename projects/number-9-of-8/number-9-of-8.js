@@ -173,28 +173,8 @@ function fade_function() {
         blackscreen.style.transition = "opacity 0.5s ease";
         blackscreen.style.opacity = "1";
         blackscreen.style.zIndex = "1";
-        musicTrack.volume = 0.8;
-        audioTrack.volume = 0.8;
+        musicTrack.pause();
+        audioTrack.pause();
     }, fadeToBlack)
-
-    setTimeout(function() {
-        musicTrack.volume = 0.6;
-        audioTrack.volume = 0.6;
-    }, fadeToBlack + 500)
-
-    setTimeout(function() {
-        musicTrack.volume = 0.4;
-        audioTrack.volume = 0.4;
-    }, fadeToBlack + 1000)
-
-    setTimeout(function() {
-        musicTrack.volume = 0.2;
-        audioTrack.volume = 0.2;
-    }, fadeToBlack + 1500)
-
-    setTimeout(function() {
-        musicTrack.volume = 0;
-        audioTrack.volume = 0;
-    }, fadeToBlack + 2000)
 
 }
