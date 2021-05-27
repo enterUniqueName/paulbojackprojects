@@ -75,7 +75,7 @@ function master_animation() {
         camContainer.style.transition = "all 1s ease";
         camContainer.style.boxSizing = "border-box";
         camContainer.style.border = "8px solid #ffff00";
-        camContainer.style.borderRadius = "12px";
+        // camContainer.style.borderRadius = "12px";
     }, addFrame)
 
     setTimeout(function() {

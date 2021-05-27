@@ -15,7 +15,8 @@ const fadeToBlack1 = openingGap + 8500;
 const cutToViewer2 = openingGap + 23950;
 const bringInZoom = cutToViewer2 + openingGap;
 const partialFade = bringInZoom + 8000;
-const finalFade = partialFade + 8000;
+const cutToViewer3 = partialFade + 8000;
+const finalFade = cutToViewer3 + 6000;
 
 function cut() {
     blackscreen.style.zIndex = "-2";
@@ -50,7 +51,7 @@ function master_animation() {
         camContainer.style.transition = "all 1s ease";
         camContainer.style.boxSizing = "border-box";
         camContainer.style.border = "8px solid #ffff00";
-        camContainer.style.borderRadius = "12px";
+        // camContainer.style.borderRadius = "12px";
     }, bringInZoom)
 
     setTimeout(function() {
@@ -60,6 +61,13 @@ function master_animation() {
     }, partialFade)
 
     setTimeout(function() {
+        blackscreen.style.zIndex = "-2";
+        blackscreen.style.transition = "opacity 0s linear";
+        blackscreen.style.opacity = "0";
+    }, cutToViewer3)
+
+    setTimeout(function() {
+        blackscreen.style.zIndex = "1";
         blackscreen.style.transition = "opacity 0s linear";
         blackscreen.style.opacity = "1";
     }, finalFade)
