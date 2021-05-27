@@ -10,8 +10,9 @@ blackscreen.style.zIndex = "1";
 
 const openingGap = 2000;
 const cutToViewer1 = openingGap + 5420;
+// Subtracting a second from the end of the line - the fade to black has a second that looks like nothing is happening, so you have to bring it in sooner. Actual time of the end of the line is 9500
 const fadeToBlack1 = openingGap + 8500;
-const cutToViewer2 = openingGap + 23000;
+const cutToViewer2 = openingGap + 23950;
 const bringInZoom = cutToViewer2 + openingGap;
 const partialFade = bringInZoom + 8000;
 const finalFade = partialFade + 8000;
