@@ -173,8 +173,11 @@ function fade_function() {
         blackscreen.style.transition = "opacity 0.5s ease";
         blackscreen.style.opacity = "1";
         blackscreen.style.zIndex = "1";
-        musicTrack.pause();
         audioTrack.pause();
     }, fadeToBlack)
+
+    setTimeout(function() {
+        musicTrack.pause();
+    }, fadeToBlack + 500)
 
 }
