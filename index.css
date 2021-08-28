@@ -27,18 +27,18 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     text-align: center;
     padding-bottom:24px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px 24px 48px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 p { margin: 0; }
-
-.credits {
-    position: absolute;
-    left: 48px;
-    bottom: 48px;
-}
 
 .copyright {
     font-size:12px;
@@ -51,6 +51,28 @@ p { margin: 0; }
     color: white;
     font-style: italic;
     margin-top: 6px;
+}
+.disclaimer-container {
+    padding: 0 48px;
+}
+
+@media screen and (max-width: 1160px) {
+    footer {
+        flex-wrap: wrap;
+    }
+    .disclaimer-container {
+        order: 3;
+        width: 100%;
+        margin-top: 24px;
+        padding: 0;
+    }
+}
+@media screen and (max-height: 770px) {
+    footer {
+        position:unset;
+        margin-top: 48px;
+        padding: 0 0 18px 0;
+    }
 }
 
 /* Credits Page */

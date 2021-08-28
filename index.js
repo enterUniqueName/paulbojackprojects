@@ -15,7 +15,8 @@ function goBack() {
   if(loggedIn === 'true') {
     window.location = '/index.html';
   } else {
-    window.location = '/index_copy.html';
+    window.location = '/index.html';
+    // window.location = '/index_copy.html';
   }
 };
 

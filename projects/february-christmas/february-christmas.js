@@ -60,6 +60,10 @@ bloodVid.style.opacity = "0";
 handsYoungVid.style.opacity = "0";
 iceVid.style.opacity = "0";
 
+function playAudio() {
+    document.getElementById("audio_element").play();
+}
+
 //master fade function
 function fade_function() {
     blackscreen.style.transition = "opacity 3s ease";
@@ -68,6 +72,10 @@ function fade_function() {
     bloodVid.style.transition = "opacity 3s ease";
     handsYoungVid.style.transition = "opacity 3s ease";
     iceVid.style.transition = "opacity 3s ease";
+
+    setTimeout(function() {
+        playAudio();
+    }, startFadeUpTree - 1000)
 
     setTimeout(function() {
         treeVid.play()
