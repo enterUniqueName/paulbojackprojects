@@ -75,7 +75,7 @@ function fade_function() {
 
     setTimeout(function() {
         playAudio();
-    }, startFadeUpTree - 1000)
+    }, startFadeUpTree - 2000)
 
     setTimeout(function() {
         treeVid.play()
