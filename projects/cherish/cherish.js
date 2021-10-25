@@ -8,7 +8,16 @@ blackscreen.style.opacity = "1";
 
 function cardOne() {
     let tl = gsap.timeline();
-    tl.to('#cherish-bright', {
+    tl
+    .to('#cherish-bright', {
+        duration: 3,
+        opacity: 1,
+    })
+    .to('#every', {
+        duration: 3,
+        opacity: 1,
+    })
+    .to('#moment', {
         duration: 3,
         opacity: 1,
     })
@@ -20,18 +29,10 @@ function cardOne() {
         duration: 3,
         opacity: 1,
     }, '<')
-    .to('#every', {
-        duration: 3,
-        opacity: 1,
-    }, '<')
-    .to('#moment', {
-        duration: 3,
-        opacity: 1,
-    })
     .to('.card.one', {
         opacity: 0,
         duration: 3,
-    }, "+=3")
+    }, "+=1")
     .to(blackscreen, {
         opacity: 0,
         duration: 0,
@@ -48,6 +49,14 @@ function cardTwo() {
     .to('#except-bright', {
         duration: 3,
         opacity: 1,
+    }, '+=1')
+    .to('#that', {
+        duration: 3,
+        opacity: 1,
+    })
+    .to('#one', {
+        duration: 3,
+        opacity: 1,
     })
     .to('#except-bright', {
         duration: 3,
@@ -57,18 +66,10 @@ function cardTwo() {
         duration: 3,
         opacity: 1,
     }, '<')
-    .to('#that', {
-        duration: 3,
-        opacity: 1,
-    }, '<')
-    .to('#one', {
-        duration: 3,
-        opacity: 1,
-    })
     .to('.card.two', {
         opacity: 0,
         duration: 3,
-    }, "+=3")
+    }, "+=1")
     .to(blackscreen, {
         opacity: 0,
         duration: 0,
@@ -85,7 +86,7 @@ function cardThree() {
     .to('#afew', {
         duration: 2,
         opacity: 1,
-    })
+    }, '+=1')
     .to('#and', {
         duration: 2,
         opacity: 1,
@@ -101,7 +102,7 @@ function cardThree() {
     .to('#others', {
         duration: 2,
         opacity: 1,
-    })
+    }, '+=1')
     .to('.card.three', {
         opacity: 0,
         duration: 3,
@@ -127,7 +128,7 @@ function blackout() {
 function master_animation() {
     let mastertl = gsap.timeline();
     mastertl
-    .add(cardOne())
+    .add(cardOne(), '2')
     .add(cardTwo(), '+=3')
     .add(cardThree(), '+=3')
     .add(blackout(), '+=3')
