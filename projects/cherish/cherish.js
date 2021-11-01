@@ -49,7 +49,7 @@ function cardTwo() {
     .to('#except-bright', {
         duration: 3,
         opacity: 1,
-    }, '+=1')
+    })
     .to('#that', {
         duration: 3,
         opacity: 1,

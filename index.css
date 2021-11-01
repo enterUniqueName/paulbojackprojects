@@ -126,6 +126,11 @@ table td {
     bottom: 10px;
     right: 20px;
 }
+#modal_wrapper .footer-text {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
 .login {
     position:absolute;
     right: 36px;
