@@ -3,6 +3,7 @@
 const camContainer = document.getElementById("cam_container");
 const blackscreen = document.getElementById("blackscreen");
 const audioTrack = document.getElementById("audioTrack");
+const audioTrack2 = document.getElementById("audioTrackTwo")
 
 camContainer.style.opacity = "1";
 blackscreen.style.opacity = "1";
@@ -61,15 +62,25 @@ function master_animation() {
     }, partialFade)
 
     setTimeout(function() {
-        blackscreen.style.zIndex = "-2";
-        blackscreen.style.transition = "opacity 0s linear";
-        blackscreen.style.opacity = "0";
-    }, cutToViewer3)
+        audioTrack2.play();
+    }, partialFade + 4000)
+
+    // setTimeout(function() {
+    //     blackscreen.style.zIndex = "-2";
+    //     blackscreen.style.transition = "opacity 0s linear";
+    //     blackscreen.style.opacity = "0";
+    // }, cutToViewer3)
+
+    // setTimeout(function() {
+    //     blackscreen.style.zIndex = "1";
+    //     blackscreen.style.transition = "opacity 0s linear";
+    //     blackscreen.style.opacity = "1";
+    // }, finalFade)
 
     setTimeout(function() {
         blackscreen.style.zIndex = "1";
         blackscreen.style.transition = "opacity 0s linear";
         blackscreen.style.opacity = "1";
-    }, finalFade)
+    }, partialFade + 4000 + 14000)
 
 }
