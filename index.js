@@ -1,6 +1,6 @@
 function checkForm() {  
     const passwordInput = document.getElementById("passwordInput").value;
-    let check = passwordInput.toLowerCase() === "yourreflection77";
+    let check = passwordInput.toLowerCase() === "avenue42";
     if(check) {
       window.location = 'index.html';
       sessionStorage.setItem('login', 'true');
