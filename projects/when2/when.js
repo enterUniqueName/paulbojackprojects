@@ -94,7 +94,7 @@ function master_animation() {
     // }, finalFade)
 
     setTimeout(function() {
-        whiteVid.style.opacity = '1';
+        whiteVid.style.opacity = '0.35';
         blackscreen.style.zIndex = "-2";
         blackscreen.style.opacity = "0";
         whiteVid.play();
@@ -104,7 +104,7 @@ function master_animation() {
         whiteVid.style.transition = "opacity 0.5s ease";
         whiteVid.style.opacity = '0';
         blackVid.style.transition = "opacity 0.5s ease";
-        blackVid.style.opacity = "1";
+        blackVid.style.opacity = "0.35";
         blackVid.play()
     }, cutToViewer4 + 5000 + 5000)
 
