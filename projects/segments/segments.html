@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Cherish</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
+  <link href='../global.css' rel='stylesheet'>
+  <link href='segments.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="master_animation()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+
+    <video id="countupVid" class="videoEmbed" preload muted>
+      <source src="assets/countup.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video id="countdownVid" class="videoEmbed" preload muted>
+      <source src="assets/countdown.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- <div id="overall_text" class="overall_text">
+        <div class="card one">
+          <div class="every">EVERY</div>
+          <div class="cherish"></div>
+          <div class="moment">MOMENT</div>
+        </div>
+        <div class="card two">
+          <div class="that">THAT</div>
+          <div class="except"></div>
+          <div class="one">ONE</div>
+        </div>
+        <div class="card three">
+          <div class='horizontal-container'>
+            <span class="and">AND</span>
+            <span class="comma">,</span>
+            <span class="maybe">&nbsp;MAYBE</span>
+            <span class="a"></span>
+            <span class="few"></span>
+            <span class="others">&nbsp;OTHERS</span>
+          </div>
+        </div>
+    </div> -->
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src='segments.js'></script>
+
+</body>
+
+</html>

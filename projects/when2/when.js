@@ -94,27 +94,29 @@ function master_animation() {
     // }, finalFade)
 
     setTimeout(function() {
-        whiteVid.style.opacity = '0.35';
+        whiteVid.style.opacity = '1';
         blackscreen.style.zIndex = "-2";
         blackscreen.style.opacity = "0";
         whiteVid.play();
     }, cutToViewer4)
 
     setTimeout(function() {
-        whiteVid.style.transition = "opacity 0.5s ease";
-        whiteVid.style.opacity = '0';
+        // whiteVid.style.transition = "opacity 0.5s ease";
+        // whiteVid.style.opacity = '0';
+        blackVid.style.zIndex = "1";
         blackVid.style.transition = "opacity 0.5s ease";
-        blackVid.style.opacity = "0.35";
+        blackVid.style.opacity = "1";
         blackVid.play()
     }, cutToViewer4 + 5000 + 5000)
 
     setTimeout(function() {
         cut();
+        whiteVid.style.opacity = "0";
         blackVid.style.opacity = "0";
     }, cutToViewer4 + 10000 + 10000)
 
     setTimeout(function() {
-        blackscreen.style.zIndex = "1";
+        blackscreen.style.zIndex = "2";
         blackscreen.style.transition = "opacity 5s ease";
         blackscreen.style.opacity = "1";
     }, cutToViewer4 + 20000 + 4000)
