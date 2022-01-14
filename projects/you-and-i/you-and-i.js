@@ -15,6 +15,9 @@ const IWANT = document.getElementById("IWANT");
 const WANT = document.getElementById("WANT");
 const INEED = document.getElementById("INEED");
 
+const fadeWant = document.getElementById("fadeWant");
+const fadeNeed = document.getElementById("fadeNeed");
+
 
 
 I.style.opacity = "0";
@@ -86,10 +89,18 @@ function set2() {
         duration: 0,
         opacity: 1,
     }, '+=1')
+    .to(fadeWant, {
+        duration: 3,
+        opacity: 1,
+    }, '+=1')
     .to(IWANT, {
         duration: 0,
         opacity: 0,
     }, '+=1')
+    .to(fadeWant, {
+        duration:0,
+        opacity: 0,
+    }, '<')
     .to('#overall_text', {
         duration: 0,
         opacity: 0,
@@ -170,10 +181,18 @@ function set4() {
         duration: 0,
         opacity: 1,
     }, '+=1')
+    .to(fadeNeed, {
+        duration: 3,
+        opacity: 1,
+    }, '+=1')
     .to(INEED, {
         duration: 0,
         opacity: 0,
     }, '+=1')
+    .to(fadeNeed, {
+        duration:0,
+        opacity: 0,
+    }, '<')
     .to('#overall_text', {
         duration: 0,
         opacity: 0,

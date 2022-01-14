@@ -103,28 +103,34 @@ function master_animation() {
     }, cutToViewer4)
 
     setTimeout(function() {
+        blackVid.play()
         // whiteVid.style.transition = "opacity 0.5s ease";
         // whiteVid.style.opacity = '0';
-        blackVid.style.zIndex = "1";
-        blackVid.style.transition = "opacity 0.5s ease";
-        blackVid.style.opacity = "1";
-        blackVid.play()
+        // blackVid.style.zIndex = "1";
+        // blackVid.style.transition = "opacity 1s ease";
+        // blackVid.style.opacity = "1";
     }, cutToViewer4 + 5000)
 
     setTimeout(function() {
-        cut();
-        whiteVid.style.opacity = "0";
-        blackVid.style.opacity = "0";
-    }, cutToViewer4 + 5000 + 3000)
+        blackVid.style.transition = "opacity 1s ease";
+        blackVid.style.opacity = "1";
+        // blackVid.pause();
+    }, cutToViewer4 + 5000 + 100)
 
-    setTimeout(function() {
-        audioTag.play();
-    }, cutToViewer4 + 5000 + 3000 + 1000)
+    // setTimeout(function() {
+    //     cut();
+    //     whiteVid.style.opacity = "0";
+    //     blackVid.style.opacity = "0";
+    // }, cutToViewer4 + 5000 + 3000)
 
-    setTimeout(function() {
-        blackscreen.style.zIndex = "2";
-        blackscreen.style.transition = "opacity 0s";
-        blackscreen.style.opacity = "1";
-    }, cutToViewer4 + 5000 + 3000 + 1000 + 940)
+    // setTimeout(function() {
+    //     audioTag.play();
+    // }, cutToViewer4 + 5000 + 3000 + 1000)
+
+    // setTimeout(function() {
+    //     blackscreen.style.zIndex = "2";
+    //     blackscreen.style.transition = "opacity 0s";
+    //     blackscreen.style.opacity = "1";
+    // }, cutToViewer4 + 5000 + 3000 + 1000 + 940)
 
 }

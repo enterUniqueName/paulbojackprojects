@@ -25,6 +25,9 @@ body {
     background: #D10000;
     z-index: -1;
 }
+#fadeWant, #fadeNeed {
+    opacity:0;
+}
 
 * {
     font-family: 'Calibri', sans-serif;

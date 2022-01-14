@@ -56,7 +56,7 @@ function playTrack2() {
 function playTunnelVid() {
     tunnelVid.play();
     tunnelVid.style.transition = 'opacity 0.5s ease';
-    tunnelVid.style.opacity = '0.5';
+    tunnelVid.style.opacity = '0.3';
 }
 function blackout() {
     let tl = gsap.timeline();
@@ -97,7 +97,7 @@ function master_animation() {
     mastertl
     // Start after 2 seconds of black
     .call(playTrack1, [], '2')
-    .add(cutToViewer(), '+=2.5')
+    .add(cutToViewer(), '+=3.5') //2.5 seconds for audio, plus one second pause on black before cutting to viewer.
     .add(blackout(), '+=1')
     .add(cutToViewer(), '+=0.1')
     .add(blackout(), '+=1')
