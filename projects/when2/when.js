@@ -109,7 +109,7 @@ function master_animation() {
         // blackVid.style.zIndex = "1";
         // blackVid.style.transition = "opacity 1s ease";
         // blackVid.style.opacity = "1";
-    }, cutToViewer4 + 5000)
+    }, cutToViewer4 + 5000 + 1000) //adding an extra second
 
     setTimeout(function() {
         blackVid.style.transition = "opacity 1s ease";

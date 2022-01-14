@@ -104,7 +104,7 @@ function set2() {
     .to('#overall_text', {
         duration: 0,
         opacity: 0,
-    }, '+=1')
+    }, '<')
     .to(whitescreen, {
         duration: 0,
         opacity: 0,
@@ -196,7 +196,7 @@ function set4() {
     .to('#overall_text', {
         duration: 0,
         opacity: 0,
-    }, '+=1')
+    }, '<')
     .to(whitescreen, {
         duration: 0,
         opacity: 0,
