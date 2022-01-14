@@ -5,6 +5,7 @@ const blackscreen = document.getElementById("blackscreen");
 const audioTrack = document.getElementById("audioTrack");
 const whiteVid = document.getElementById("whiteVid");
 const blackVid = document.getElementById("blackVid");
+const audioTag = document.getElementById("audioTag");
 
 
 // Global Timing
@@ -94,6 +95,7 @@ function master_animation() {
     // }, finalFade)
 
     setTimeout(function() {
+        // This includes the cut functions
         whiteVid.style.opacity = '1';
         blackscreen.style.zIndex = "-2";
         blackscreen.style.opacity = "0";
@@ -107,18 +109,22 @@ function master_animation() {
         blackVid.style.transition = "opacity 0.5s ease";
         blackVid.style.opacity = "1";
         blackVid.play()
-    }, cutToViewer4 + 5000 + 5000)
+    }, cutToViewer4 + 5000)
 
     setTimeout(function() {
         cut();
         whiteVid.style.opacity = "0";
         blackVid.style.opacity = "0";
-    }, cutToViewer4 + 10000 + 10000)
+    }, cutToViewer4 + 5000 + 3000)
+
+    setTimeout(function() {
+        audioTag.play();
+    }, cutToViewer4 + 5000 + 3000 + 1000)
 
     setTimeout(function() {
         blackscreen.style.zIndex = "2";
-        blackscreen.style.transition = "opacity 5s ease";
+        blackscreen.style.transition = "opacity 0s";
         blackscreen.style.opacity = "1";
-    }, cutToViewer4 + 20000 + 4000)
+    }, cutToViewer4 + 5000 + 3000 + 1000 + 940)
 
 }

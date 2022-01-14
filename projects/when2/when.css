@@ -25,9 +25,9 @@ body {
     height: 100%;
     min-height: 56.25vw;
 }
-.blackVid {
+/* .blackVid {
     mix-blend-mode: darken;
-}
-.whiteVid {
+} */
+.whiteVid, .blackVid {
     mix-blend-mode: screen;
 }
