@@ -12,7 +12,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
   <link href='../global.css' rel='stylesheet'>
-  <link href='you-and-i.css' rel='stylesheet'>
+  <link href='trust-me.css' rel='stylesheet'>
 
 </head>
 
@@ -39,21 +39,17 @@
   <div id="project_container" class="project_container">
 
     <div class="blackscreen" id="blackscreen"></div>
-    <div class="whitescreen" id="whitescreen"></div>
+    <!-- <div class="whitescreen" id="whitescreen"></div> -->
+
+    <audio id="audioTrack1" src="assets/VerySoon_1.wav" preload>Your browser does not support the <code>audio</code> element.</audio>
+    <audio id="audioTrack2" src="assets/VerySoon_2.wav" preload>Your browser does not support the <code>audio</code> element.</audio>
+
+    <video id="tunnelVid" class="whiteVid videoEmbed" preload muted>
+      <source src="assets/testVids/1063119175-preview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
     <div id="overall_text" class="overall_text">
-      <div id="I">I</div>
-      <div id="DONT">DON'T</div>
-      <div id="NEED">NEED</div>
-      <div id="BUT">BUT</div>
-      <!-- I -->
-      <div id="fadeWant">WANT</div>
-      <!-- I -->
-      <!-- DONT -->
-      <div id="WANT">WANT</div>
-      <!-- BUT -->
-      <!-- I -->
-      <div id="fadeNeed">NEED</div>
     </div>
 
   </div>
@@ -61,7 +57,7 @@
   <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
   <script src='../global.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src='you-and-i.js'></script>
+  <script src='trust-me.js'></script>
 
 </body>
 
