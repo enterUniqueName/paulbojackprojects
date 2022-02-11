@@ -45,23 +45,26 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 } */
+.overall_text { color: #787276; font-size: 1.5em; }
+
 .overall_text .left-block {
     position: absolute;
-    left: 8%;
+    left: 10%;
     top: 15%;
     /* transform: translate(-50%, -50%); */
+    font-size: 1.6em;
 }
 .overall_text .right-block {
     position: absolute;
-    right: 12%;
-    bottom: 15%;
+    right: 15%;
+    bottom: 18%;
     /* transform: translate(-50%, -50%); */
+    font-size: 1.6em;
 }
 .overall_text .center-block {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2.5em;
 }
-
-.overall_text { color: #787276; font-size: 1.5em; }

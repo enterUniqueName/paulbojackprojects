@@ -29,10 +29,15 @@ fadeNeed.style.opacity = "0";
 function set1() {
     let tl = gsap.timeline();
     tl
+    .add(function() {
+        I.classList.toggle("fontDown");
+        DONT.classList.toggle("fontDown");
+        NEED.classList.toggle("fontDown");
+    })
     .to(I, {
         duration: 0.1,
         opacity: 1,
-    })
+    }, '<')
     .to(I, {
         duration: 0,
         opacity: 0,
@@ -60,6 +65,11 @@ function set1() {
     .to(whitescreen, {
         duration: 0,
         opacity: 0,
+    }, '<')
+    .add(function() {
+        I.classList.toggle("fontDown");
+        DONT.classList.toggle("fontDown");
+        NEED.classList.toggle("fontDown");
     }, '<')
     return tl;
 };
@@ -119,7 +129,7 @@ function set2() {
     .to(whitescreen, {
         duration: 0,
         opacity: 0,
-    }, '<')
+    }, '+=1')
     .add(function() {
         BUT.classList.toggle("fontUp");
         I.classList.toggle("fontUp");
@@ -138,6 +148,11 @@ function set3() {
     .set('#overall_text', {
         duration: 0,
         opacity: 1,
+    }, '<')
+    .add(function() {
+        I.classList.toggle("fontDown");
+        DONT.classList.toggle("fontDown");
+        WANT.classList.toggle("fontDown");
     }, '<')
     .to(I, {
         duration: 0,
@@ -171,6 +186,11 @@ function set3() {
         duration: 0,
         opacity: 0,
     }, '<')
+    .add(function() {
+        I.classList.toggle("fontDown");
+        DONT.classList.toggle("fontDown");
+        WANT.classList.toggle("fontDown");
+    }, '<')
     return tl;
 };
 
@@ -186,9 +206,9 @@ function set4() {
         opacity: 1,
     }, '<')
     .add(function() {
-        BUT.classList.toggle("fontDown");
-        I.classList.toggle("fontDown");
-        NEED.classList.toggle("fontDown");
+        BUT.classList.toggle("fontDownDouble");
+        I.classList.toggle("fontDownDouble");
+        NEED.classList.toggle("fontDownDouble");
     }, '<')
     .to(BUT, {
         duration: 0.1,
@@ -229,11 +249,11 @@ function set4() {
     .to(whitescreen, {
         duration: 0,
         opacity: 0,
-    }, '<')
+    }, '+=1')
     .add(function() {
-        BUT.classList.toggle("fontDown");
-        I.classList.toggle("fontDown");
-        NEED.classList.toggle("fontDown");
+        BUT.classList.toggle("fontDownDouble");
+        I.classList.toggle("fontDownDouble");
+        NEED.classList.toggle("fontDownDouble");
     }, '<')
     return tl;
 }
