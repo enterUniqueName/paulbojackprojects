@@ -12,6 +12,8 @@ const DONT = document.getElementById("DONT");
 const NEED = document.getElementById("NEED");
 const BUT = document.getElementById("BUT");
 const WANT = document.getElementById("WANT");
+const ANY = document.getElementById("ANY");
+const MORE = document.getElementById("MORE");
 
 const fadeWant = document.getElementById("fadeWant");
 const fadeNeed = document.getElementById("fadeNeed");
@@ -25,6 +27,9 @@ BUT.style.opacity = "0";
 WANT.style.opacity = "0";
 fadeWant.style.opacity = "0";
 fadeNeed.style.opacity = "0";
+ANY.style.opacity = "0";
+MORE.style.opacity = "0";
+
 
 function set1() {
     let tl = gsap.timeline();
@@ -194,6 +199,52 @@ function set3() {
     return tl;
 };
 
+function set3_5() {
+    let tl = gsap.timeline();
+    tl
+    .set(whitescreen, {
+        duration: 0,
+        opacity: 1,
+    })
+    .set('#overall_text', {
+        duration: 0,
+        opacity: 1,
+    }, '<')
+    .add(function() {
+        ANY.classList.toggle("fontDown");
+        MORE.classList.toggle("fontDown");
+    }, '<')
+    .to(ANY, {
+        duration: 0,
+        opacity: 1,
+    }, "+=0.5")
+    .to(ANY, {
+        duration: 0,
+        opacity: 0,
+    }, '+=1')
+    .to(MORE, {
+        duration: 0,
+        opacity: 1,
+    }, '+=1')
+    .to(MORE, {
+        duration: 0,
+        opacity: 0,
+    }, '+=1')
+    .to('#overall_text', {
+        duration: 0,
+        opacity: 0,
+    }, '+=1')
+    .to(whitescreen, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
+    .add(function() {
+        ANY.classList.toggle("fontDown");
+        MORE.classList.toggle("fontDown");
+    }, '<')
+    return tl;
+};
+
 function set4() {
     let tl = gsap.timeline();
     tl
@@ -277,6 +328,7 @@ function master_animation() {
     .add(set1(), '2')
     .add(set2(), '+=3')
     .add(set3(), '+=3')
+    .add(set3_5(), '+=3')
     .add(set4(), '+=3')
     .add(blackout(), '+=4')
 }
