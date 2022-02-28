@@ -25,6 +25,13 @@ body {
     background: #D10000;
     z-index: -1;
 }
+.videoEmbed {
+    position: fixed;
+    min-width: 100%;
+    width: 177.77777778vh;
+    height: 100%;
+    min-height: 56.25vw;
+}
 /* #fadeWant, #fadeNeed {
     opacity:0;
 } */

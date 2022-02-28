@@ -7,6 +7,9 @@ const whitescreen = document.getElementById("whitescreen");
 camContainer.style.opacity = "1";
 blackscreen.style.opacity = "0";
 
+const vid = document.getElementById("vid");
+vid.style.opacity = "0";
+
 const I = document.getElementById("I");
 const DONT = document.getElementById("DONT");
 const NEED = document.getElementById("NEED");
@@ -126,7 +129,7 @@ function set2() {
     .to(WANT, {
         duration: 0,
         opacity: 0,
-    }, '+=1.5')
+    }, '+=1')
     .to('#overall_text', {
         duration: 0,
         opacity: 0,
@@ -153,6 +156,10 @@ function set3() {
     .set('#overall_text', {
         duration: 0,
         opacity: 1,
+    }, '<')
+    .set(vid, {
+        duration: 0,
+        opacity: 0,
     }, '<')
     .add(function() {
         I.classList.toggle("fontDown");
@@ -292,7 +299,7 @@ function set4() {
     .to(NEED, {
         duration: 0,
         opacity: 0,
-    }, '+=1.5')
+    }, '+=1')
     .to('#overall_text', {
         duration: 0,
         opacity: 0,
@@ -318,6 +325,11 @@ function blackout() {
     })
     return tl;
 }
+function playVid() {
+    vid.play();
+    vid.style.transition = 'opacity 0.5s ease';
+    vid.style.opacity = '0.5';
+}
 
 
 //master fade function
@@ -327,8 +339,9 @@ function master_animation() {
     // Start after 2 seconds of white
     .add(set1(), '2')
     .add(set2(), '+=3')
-    .add(set3(), '+=3')
-    .add(set3_5(), '+=3')
+    .call(playVid, [], '+=3')
+    .add(set3(), '+=6')
+    .add(set3_5(), '+=1.5')
     .add(set4(), '+=3')
     .add(blackout(), '+=4')
 }
