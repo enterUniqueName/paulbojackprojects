@@ -55,7 +55,7 @@ body {
 .overall_text .left-block {
     position: absolute;
     left: 10%;
-    top: 15%;
+    top: 18%;
     /* transform: translate(-50%, -50%); */
     font-size: 1.6em;
 }
@@ -69,7 +69,7 @@ body {
 .overall_text .center-block {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 43%;
     transform: translate(-50%, -50%);
     font-size: 1.6em;
 }

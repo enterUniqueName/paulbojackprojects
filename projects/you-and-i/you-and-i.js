@@ -101,7 +101,7 @@ function set2() {
     .to(BUT, {
         duration: 0.1,
         opacity: 1,
-    }, "+=0.5")
+    }, "<")
     .to(BUT, {
         duration: 0,
         opacity: 0
@@ -169,7 +169,7 @@ function set3() {
     .to(I, {
         duration: 0,
         opacity: 1,
-    }, "+=0.5")
+    }, "<")
     .to(I, {
         duration: 0,
         opacity: 0,
@@ -271,7 +271,7 @@ function set4() {
     .to(BUT, {
         duration: 0.1,
         opacity: 1,
-    }, "+=0.5")
+    }, "<")
     .to(BUT, {
         duration: 0,
         opacity: 0
@@ -341,7 +341,7 @@ function master_animation() {
     .add(set2(), '+=3')
     .call(playVid, [], '+=3')
     .add(set3(), '+=6')
-    .add(set3_5(), '+=1.5')
+    .add(set3_5(), '+=1')
     .add(set4(), '+=3')
     .add(blackout(), '+=4')
 }

@@ -56,7 +56,7 @@ function playTrack2() {
 function playTunnelVid() {
     tunnelVid.play();
     tunnelVid.style.transition = 'opacity 0.5s ease';
-    tunnelVid.style.opacity = '0.3';
+    tunnelVid.style.opacity = '0.2';
 }
 function blackout() {
     let tl = gsap.timeline();
