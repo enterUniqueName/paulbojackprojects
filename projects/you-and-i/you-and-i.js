@@ -43,9 +43,9 @@ function set1() {
         NEED.classList.toggle("fontDown");
     })
     .to(I, {
-        duration: 0.1,
+        duration: 0,
         opacity: 1,
-    }, '<')
+    }, '+=0.1')
     .to(I, {
         duration: 0,
         opacity: 0,
@@ -99,9 +99,9 @@ function set2() {
         WANT.classList.toggle("fontUp");
     }, '<')
     .to(BUT, {
-        duration: 0.1,
+        duration: 0,
         opacity: 1,
-    }, "<")
+    }, "+=0.1")
     .to(BUT, {
         duration: 0,
         opacity: 0
@@ -169,7 +169,7 @@ function set3() {
     .to(I, {
         duration: 0,
         opacity: 1,
-    }, "<")
+    }, "+=0.1")
     .to(I, {
         duration: 0,
         opacity: 0,
