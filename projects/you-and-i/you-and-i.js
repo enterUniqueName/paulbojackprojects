@@ -169,7 +169,7 @@ function set3() {
     .to(I, {
         duration: 0,
         opacity: 1,
-    }, "+=0.1")
+    }, "+=1")
     .to(I, {
         duration: 0,
         opacity: 0,
@@ -327,8 +327,8 @@ function blackout() {
 }
 function playVid() {
     vid.play();
-    vid.style.transition = 'opacity 0.5s ease';
-    vid.style.opacity = '0.5';
+    vid.style.transition = 'opacity 3s ease';
+    vid.style.opacity = '0.3';
 }
 
 
@@ -340,7 +340,8 @@ function master_animation() {
     .add(set1(), '2')
     .add(set2(), '+=3')
     .call(playVid, [], '+=3')
-    .add(set3(), '+=6')
+    // Let it play for 9 seconds
+    .add(set3(), '+=9')
     .add(set3_5(), '+=1')
     .add(set4(), '+=3')
     .add(blackout(), '+=4')

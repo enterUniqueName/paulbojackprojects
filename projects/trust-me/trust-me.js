@@ -112,5 +112,5 @@ function master_animation() {
     .call(playTrack2, [], '<')
     .add(cutToViewer(), '+=5.75') //4.75 seconds for audio, plus one second pause on black before cutting to viewer.
     .call(playTunnelVid, [], '+=1')
-    .add(blackFade(), '+=10')
+    .add(blackFade(), '+=8')
 }
