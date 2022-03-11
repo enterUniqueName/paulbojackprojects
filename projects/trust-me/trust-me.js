@@ -76,6 +76,15 @@ function cutToViewer() {
     })
     return tl;
 }
+function fadeOutVideo() {
+    let tl = gsap.timeline();
+    tl
+    .to(tunnelVid, {
+        opacity: 0,
+        duration: 3,
+    })
+    return tl;
+}
 function blackFade() {
     let tl = gsap.timeline();
     tl
@@ -83,10 +92,6 @@ function blackFade() {
         opacity: 1,
         duration: 3,
     })
-    .to(tunnelVid, {
-        opacity: 0,
-        duration: 3,
-    }, '<')
     return tl;
 }
 
@@ -111,6 +116,7 @@ function master_animation() {
     .add(blackout(), '+=1')
     .call(playTrack2, [], '<')
     .add(cutToViewer(), '+=5.75') //4.75 seconds for audio, plus one second pause on black before cutting to viewer.
-    .call(playTunnelVid, [], '+=1')
-    .add(blackFade(), '+=8')
+    .call(playTunnelVid, [], '+=3')
+    .add(fadeOutVideo(), '+=6')
+    .add(blackFade(), '+=0.1')
 }
