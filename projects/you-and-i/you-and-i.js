@@ -328,7 +328,8 @@ function blackout() {
 function playVid() {
     vid.play();
     vid.style.transition = 'opacity 3s ease';
-    vid.style.opacity = '0.3';
+    // change back to 0.3 if we go back to first vid
+    vid.style.opacity = '0.5';
 }
 
 
