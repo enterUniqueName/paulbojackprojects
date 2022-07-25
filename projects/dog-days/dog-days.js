@@ -56,11 +56,11 @@ function fadeToViewer() {
     tl
     .to(blackscreen, {
         opacity: 0,
-        duration: 5,
+        duration: 9,
     })
     .to('.center-block', {
         opacity: 0,
-        duration: 5,
+        duration: 9,
     }, '<')
     return tl;
 }
@@ -142,6 +142,6 @@ function master_animation() {
     .add(set3(), '+=2')
     // 3 second gap
     .add(fadeToViewer(), '+=3')
-    // 3 second gap
-    .add(blackout(), '+=3')
+    // 5 second gap
+    .add(blackout(), '+=5')
 }

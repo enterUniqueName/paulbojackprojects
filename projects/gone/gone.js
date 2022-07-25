@@ -26,7 +26,7 @@ const d3 = document.getElementById("d3");
 
 // ----------------------------------------------
 
-const animateWordTime = 2.5;
+const animateWordTime = 2.2;
 
 // whitescreen.style.opacity = "1";
 blackscreen.style.opacity = "1";
@@ -100,22 +100,22 @@ function set1() {
         duration: animateWordTime,
         opacity: 1,
     })
-    // ----- cut to viewer
+    // ----- 3 second fade to viewer (fade text at same time)
     .to(blackscreen, {
         opacity: 0,
-        duration: 0,
+        duration: 3,
     })
     .to(overallText, {
-        duration: 0,
+        duration: 3,
         opacity: 0,
     }, '<')
-    // ----- hold for two second on viewer before coming back
+    // ----- hold for three seconds on viewer before fading text/black back up
     .to(blackscreen, {
         opacity: 1,
-        duration: 0,
-    }, "+=2")
+        duration: 3,
+    }, "+=3")
     .to(overallText, {
-        duration: 0,
+        duration: 3,
         opacity: 1,
     }, '<')
     // ----- wait a second then fade out both sets
