@@ -60,3 +60,4 @@ body {
 #first  { top: 23%; }
 #second { top: 50%; transform: translate(-50%, -50%); font-size: 1.75vw; }
 #third  { top: 58%; }
+.third-override  { top: 5% !important; }

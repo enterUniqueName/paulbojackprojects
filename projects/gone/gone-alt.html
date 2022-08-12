@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- gone -->
+  <title>Paul Bojack Projects: Gone</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
+  <link href='../global.css' rel='stylesheet'>
+  <link href='gone.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="master_animation()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+    <!-- <div class="whitescreen" id="whitescreen"></div> -->
+
+    <div id="overall_text" class="overall_text">
+      <div id="first" class="set">
+        <span id="a1">I</span>
+        <span id="b1">see</span>
+        <span id="c1">you</span>
+        <span id="d1">transparent</span>
+      </div>
+      <div id="second" class="set">
+        <span id="a2">in</span>
+        <span id="b2">the</span>
+        <span id="c2">drop</span>
+        <span id="d2">of</span>
+        <span id="e2">a</span>
+        <span id="f2">prayer</span>
+      </div>
+      <div id="third" class="set third-override">
+        <span id="a3">and</span>
+        <span id="b3">long</span>
+        <span id="c3">for</span>
+        <span id="d3">you</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src='gone.js'></script>
+
+</body>
+
+</html>

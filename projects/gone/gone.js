@@ -27,6 +27,7 @@ const d3 = document.getElementById("d3");
 // ----------------------------------------------
 
 const animateWordTime = 2.2;
+const slowAnimateWordTime = 1.5;
 
 // whitescreen.style.opacity = "1";
 blackscreen.style.opacity = "1";
@@ -77,11 +78,11 @@ function set1() {
     })
     // -----
     .to(a2, {
-        duration: animateWordTime,
+        duration: slowAnimateWordTime,
         opacity: 1,
     }, "+=2")
     .to(b2, {
-        duration: animateWordTime,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(c2, {
@@ -89,11 +90,11 @@ function set1() {
         opacity: 1,
     })
     .to(d2, {
-        duration: animateWordTime,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(e2, {
-        duration: animateWordTime,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(f2, {
@@ -144,11 +145,11 @@ function set1() {
         duration: animateWordTime,
         opacity: 1,
     })
-    // ----- hold on these for 5 seconds, then 5 second dissolve to half dark screen
+    // ----- hold on these for 6.5 seconds, then 5 second dissolve to half dark screen
     .to(blackscreen, {
         opacity: 0.75,
         duration: 5,
-    }, "+=5")
+    }, "+=6.5")
     .to(third, {
         duration: 5,
         opacity: 0,
