@@ -3,11 +3,13 @@
 const camContainer = document.getElementById("cam_container");
 const blackscreen = document.getElementById("blackscreen");
 const whitescreen = document.getElementById("whitescreen");
+const redscreen = document.getElementById("redscreen");
 const audioTrack1 = document.getElementById("audioTrack1");
 const audioTrack2 = document.getElementById("audioTrack2");
 const tunnelVid = document.getElementById("tunnelVid");
 
 blackscreen.style.opacity = "1";
+redscreen.style.opacity = "0";
 tunnelVid.style.opacity = "0";
 
 // function set1() {
@@ -67,6 +69,15 @@ function blackout() {
     })
     return tl;
 }
+function redout() {
+    let tl = gsap.timeline();
+    tl
+    .set(redscreen, {
+        opacity: 1,
+        duration: 0,
+    })
+    return tl;
+}
 function cutToViewer() {
     let tl = gsap.timeline();
     tl
@@ -74,6 +85,10 @@ function cutToViewer() {
         opacity: 0,
         duration: 0,
     })
+    .set(redscreen, {
+        opacity: 0,
+        duration: 0,
+    }, '<')
     return tl;
 }
 function fadeOutVideo() {
@@ -103,15 +118,15 @@ function master_animation() {
     // Start after 2 seconds of black
     .call(playTrack1, [], '2')
     .add(cutToViewer(), '+=3.5') //2.5 seconds for audio, plus one second pause on black before cutting to viewer.
-    .add(blackout(), '+=1')
+    .add(redout(), '+=1')
     .add(cutToViewer(), '+=0.1')
-    .add(blackout(), '+=1')
+    .add(redout(), '+=1')
     .add(cutToViewer(), '+=0.1')
-    .add(blackout(), '+=1')
+    .add(redout(), '+=1')
     .add(cutToViewer(), '+=0.1')
-    .add(blackout(), '+=1')
+    .add(redout(), '+=1')
     .add(cutToViewer(), '+=0.1')
-    .add(blackout(), '+=1')
+    .add(redout(), '+=1')
     .add(cutToViewer(), '+=0.1')
     .add(blackout(), '+=1')
     .call(playTrack2, [], '<')

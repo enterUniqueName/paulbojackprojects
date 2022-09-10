@@ -26,9 +26,6 @@ const d3 = document.getElementById("d3");
 
 // ----------------------------------------------
 
-const animateWordOne = 1;
-const animateWordOnePointTwo = 1.2;
-const animateWordOnePointFive = 1.5;
 const animateWordTime = 2.2;
 const slowAnimateWordTime = 1.5;
 
@@ -64,29 +61,28 @@ function set1() {
     let tl = gsap.timeline();
     tl
     .to(a1, {
-        duration: animateWordOne,
+        duration: animateWordTime,
         opacity: 1,
     })
     .to(b1, {
-        duration: animateWordOnePointFive,
+        duration: animateWordTime,
         opacity: 1,
     })
     .to(c1, {
-        duration: animateWordOnePointFive,
+        duration: animateWordTime,
         opacity: 1,
     })
-    // 1 second pause between "you" and "transparent"
     .to(d1, {
         duration: animateWordTime,
         opacity: 1,
-    }, '+=1')
+    })
     // -----
     .to(a2, {
-        duration: animateWordOnePointTwo,
+        duration: slowAnimateWordTime,
         opacity: 1,
     }, "+=2")
     .to(b2, {
-        duration: animateWordOnePointTwo,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(c2, {
@@ -94,22 +90,22 @@ function set1() {
         opacity: 1,
     })
     .to(d2, {
-        duration: animateWordOnePointTwo,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(e2, {
-        duration: animateWordOnePointTwo,
+        duration: slowAnimateWordTime,
         opacity: 1,
     })
     .to(f2, {
-        duration: 3,
+        duration: animateWordTime,
         opacity: 1,
     })
-    // ----- hold for 4 seconds, then 3 second fade to viewer (fade text at same time)
+    // ----- 3 second fade to viewer (fade text at same time)
     .to(blackscreen, {
         opacity: 0,
         duration: 3,
-    }, '+=4')
+    })
     .to(overallText, {
         duration: 3,
         opacity: 0,
@@ -134,7 +130,7 @@ function set1() {
     }, "<")
     // -----
     .to(a3, {
-        duration: animateWordOnePointTwo,
+        duration: animateWordTime,
         opacity: 1,
     }, "+=2")
     .to(b3, {
@@ -142,18 +138,18 @@ function set1() {
         opacity: 1,
     })
     .to(c3, {
-        duration: animateWordOnePointFive,
+        duration: animateWordTime,
         opacity: 1,
     })
     .to(d3, {
-        duration: 3,
+        duration: animateWordTime,
         opacity: 1,
     })
-    // ----- hold on these for 8.5 seconds, then 5 second dissolve to half dark screen
+    // ----- hold on these for 6.5 seconds, then 5 second dissolve to half dark screen
     .to(blackscreen, {
         opacity: 0.75,
         duration: 5,
-    }, "+=8.5")
+    }, "+=6.5")
     .to(third, {
         duration: 5,
         opacity: 0,

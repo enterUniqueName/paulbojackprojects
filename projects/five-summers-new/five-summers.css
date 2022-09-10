@@ -39,14 +39,9 @@ body {
 }
 
 * {
-    font-family: 'euphemia', sans-serif;
-    color: #315053;
-    font-size: 4.8vw;
+    color: #808080;
+    font-size: 16px;
     white-space: nowrap;
-}
-
-.overall_text.original {
-    font-size: 4.2vw;
 }
 
 .overall_text {
@@ -56,12 +51,8 @@ body {
 }
 
 /* Custom */
-.set {
-    left: 50%;
-    transform: translate(-50%, 0);
-    position: absolute;
+.overall_text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-#first  { top: 23%; }
-#second { top: 50%; transform: translate(-50%, -50%); font-size: 1.75vw; }
-#third  { top: 58%; }
-.third-override  { top: 5% !important; }
