@@ -2,6 +2,8 @@
 
 const camContainer = document.getElementById("cam_container");
 const blackscreen = document.getElementById("blackscreen");
+const blackscreenLeft = document.getElementById("blackscreen-left");
+const blackscreenRight = document.getElementById("blackscreen-right");
 const whitescreen = document.getElementById("whitescreen");
 
 camContainer.style.opacity = "1";
@@ -112,6 +114,15 @@ function set2() {
         duration: 0,
         opacity: 0,
     }, '<')
+    // Remove Left and Right
+    .to(blackscreenLeft, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
+    .to(blackscreenRight, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
     return tl;
 }
 
@@ -122,6 +133,15 @@ function set3() {
         duration: 0,
         opacity: 1,
     }, '+=0.1')
+    // Add Back Left and Right
+    .to(blackscreenLeft, {
+        duration: 0,
+        opacity: 1,
+    }, '<')
+    .to(blackscreenRight, {
+        duration: 0,
+        opacity: 1,
+    }, '<')
     .to(I1, {
         duration: 0,
         opacity: 1,
@@ -155,14 +175,23 @@ function set3() {
         duration: 0,
         opacity: 0,
     }, '<')
-    .to(ANYMORE, {
-        duration: 0,
-        opacity: 0,
-    }, '<')
     .to(whitescreen, {
         duration: 0,
         opacity: 1,
     }, '+=5')
+    .to(ANYMORE, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
+    // Remove Left and Right
+    .to(blackscreenLeft, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
+    .to(blackscreenRight, {
+        duration: 0,
+        opacity: 0,
+    }, '<')
     return tl;
 };
 
@@ -173,6 +202,15 @@ function set4() {
         duration: 0,
         opacity: 1,
     }, '+=0.1')
+    // Add Back Left and Right
+    .to(blackscreenLeft, {
+        duration: 0,
+        opacity: 1,
+    }, '<')
+    .to(blackscreenRight, {
+        duration: 0,
+        opacity: 1,
+    }, '<')
     .add(function() {
         BUT.classList.toggle("secondFont");
         I2.classList.toggle("secondFont");
@@ -226,6 +264,22 @@ function blackout() {
 function flash() {
     let tl = gsap.timeline();
     tl
+    .to(whitescreen, {
+        opacity: 0,
+        duration: 0.2,
+    }, '+=1')
+    .to(whitescreen, {
+        opacity: 1,
+        duration: 0.2
+    }, '+=1')
+    .to(whitescreen, {
+        opacity: 0,
+        duration: 0.2,
+    }, '+=1')
+    .to(whitescreen, {
+        opacity: 1,
+        duration: 0.2
+    }, '+=1')
     .to(whitescreen, {
         opacity: 0,
         duration: 0.2,

@@ -39,7 +39,7 @@ function blackFlash(a, b) {
     let tl = gsap.timeline();
     tl
     .to(blackscreen, {
-        opacity: 0.5,
+        opacity: 1,
         duration: 0,
     }, a)
     .to(blackscreen, {

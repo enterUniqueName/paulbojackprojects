@@ -103,4 +103,6 @@ body {
 .secondFont {
     font-family: 'EskapadeFraktur', sans-serif;
     font-weight: normal;
+    text-transform: lowercase;
+    font-size: 6vw;
 }
