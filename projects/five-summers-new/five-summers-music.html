@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- gone -->
+  <title>Paul Bojack Projects: Five Summers</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
+  <link href='../global.css' rel='stylesheet'>
+  <link href='five-summers.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="master_animation()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+    <!-- <div class="whitescreen" id="whitescreen"></div> -->
+    <audio id="audioTrack" src="assets/5-summers-music-edit.wav" preload>Your browser does not support the <code>audio</code> element.</audio>
+
+    <div id="overall_text" class="overall_text original">
+      <div id="five" class="set">
+        <span id="a5">me</span>
+      </div>
+      <div id="four" class="set">
+        <span id="a4">to</span>
+      </div>
+      <div id="three" class="set">
+        <span id="a3">happened</span>
+      </div>
+      <div id="two" class="set">
+        <span id="a2">ever</span>
+      </div>
+      <div id="one" class="set">
+        <span id="a1">What</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src='five-summers-music.js'></script>
+
+</body>
+
+</html>

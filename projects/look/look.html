@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Cherish</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">  
+  <link href='../global.css' rel='stylesheet'>
+  <link href='look.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <!-- TEMPLATE - SAME ON ALL -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <!-- TEMPLATE - SAME ON ALL - **DONT CHANGE** -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="master_animation()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <!-- TEMPLATE - Top div is the same, change the children -->
+  <div id="project_container" class="project_container">
+
+    <div class="blackscreen" id="blackscreen"></div>
+    <div class="whitescreen" id="whitescreen"></div>
+    <div class="blackscreen left" id="blackscreen-left"></div>
+    <div class="blackscreen right" id="blackscreen-right"></div>
+
+    <div id="overall_text" class="overall_text">
+      <!-- Set 1 -->
+      <div id="I1">I</div>
+      <div id="DONT">DON'T</div>
+      <div id="NEED">NEED</div>
+
+      <!-- Set 2 -->
+      <div id="BUT">BUT</div>
+      <div id="I2">I</div>
+      <div id="WANT">WANT</div>
+
+      <!-- Set 3 -->
+      <!-- <div id="I3">I</div> -->
+      <!-- <div id="DONT3">DON'T</div> -->
+      <!-- <div id="WANT3">WANT</div> -->
+      <div id="ANYMORE">ANYMORE</div>
+
+      <!-- Set 4 -->
+      <!-- <div id="BUT4">BUT</div> -->
+      <!-- <div id="I4">I</div> -->
+      <!-- <div id="NEED4">NEED</div> -->
+    </div>
+
+    <video id="vid" class="whiteVid videoEmbed" preload muted style="mix-blend-mode: hard-light;">
+      <source src="assets/YouAndI-BubblesEdit.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </div>
+
+  <!-- TEMPLATE - MUST BE CALLED AT END OF DOCUMENT -->
+  <script src='../global.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src='look.js'></script>
+
+</body>
+
+</html>

@@ -17,7 +17,8 @@ const holdTextBeforeCut = '+=4';
 const holdOnViewerBeforeFade = '+=5';
 const holdOnBlack = '+=10';
 const holdOnViewerBeforeFlash = '+=4';
-const flashGap = '+=3';
+const flashDuration = "+=2";
+const flashGap = '+=2';
 const holdOnViewerBeforeCut = '+=1';
 
 // whitescreen.style.opacity = "1";
@@ -29,6 +30,21 @@ two.style.opacity = "0";
 three.style.opacity = "0";
 four.style.opacity = "0";
 five.style.opacity = "0";
+
+// Function for Flash
+function blackFlash(a, b) {
+    let tl = gsap.timeline();
+    tl
+    .to(blackscreen, {
+        opacity: 1,
+        duration: 0,
+    }, a)
+    .to(blackscreen, {
+        opacity: 0,
+        duration: 0,
+    }, b)
+    return tl;
+}
 
 
 // ----------------------------------------------
@@ -80,42 +96,19 @@ function set1() {
     }, holdOnBlack)
 
     // ----------
-    // Flashing Black - 4 flashes
-    .to(blackscreen, {
-        opacity: 1,
-        duration: 0.1,
-    }, holdOnViewerBeforeFlash)
-    .to(blackscreen, {
-        opacity: 0,
-        duration: 0,
-    })
-
-    .to(blackscreen, {
-        opacity: 1,
-        duration: 0.1,
-    }, flashGap)
-    .to(blackscreen, {
-        opacity: 0,
-        duration: 0,
-    })
-
-    .to(blackscreen, {
-        opacity: 1,
-        duration: 0.1,
-    }, flashGap)
-    .to(blackscreen, {
-        opacity: 0,
-        duration: 0,
-    })
-
-    .to(blackscreen, {
-        opacity: 1,
-        duration: 0.1,
-    }, flashGap)
-    .to(blackscreen, {
-        opacity: 0,
-        duration: 0,
-    })
+    // Flashing Black - 46 seconds of flashing
+    .add(blackFlash(holdOnViewerBeforeFlash, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
+    .add(blackFlash(flashGap, flashDuration))
 
     // ----------
     // hold on viewer 1s then cut to black
