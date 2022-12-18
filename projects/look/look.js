@@ -145,7 +145,7 @@ function set3() {
     .to(I1, {
         duration: 0,
         opacity: 1,
-    })
+    }, '+=1')
     .to(DONT, {
         duration: 0,
         opacity: 1,
@@ -165,7 +165,7 @@ function set3() {
     .to(ANYMORE, {
         duration: 0,
         opacity: 1,
-    }, '+=2')
+    }, '+=1.5')
     // Remove remaining text when adding ANYMORE
     .to(DONT, {
         duration: 0,
@@ -178,7 +178,7 @@ function set3() {
     .to(whitescreen, {
         duration: 0,
         opacity: 1,
-    }, '+=5')
+    }, '+=7')
     .to(ANYMORE, {
         duration: 0,
         opacity: 0,
@@ -219,7 +219,7 @@ function set4() {
     .to(BUT, {
         duration: 0,
         opacity: 1,
-    }, "+=0.5")
+    }, "+=1")
     .to(I2, {
         duration: 0,
         opacity: 1,
@@ -321,6 +321,6 @@ function master_animation() {
     .add(set3(), '+=1')
     .add(flash(), '+=0.1')
     .add(set4(), '+=1')
-    // fade to black after 5 seconds
-    .add(blackout(), '+=5')
+    // fade to black after 8 seconds
+    .add(blackout(), '+=8')
 }

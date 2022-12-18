@@ -63,12 +63,12 @@ body {
 
 /* New for Look */
 .blackscreen.left {
-    width: 30%;
+    width: 25%;
     height: 100%;
     left: 0;
 }
 .blackscreen.right {
-    width: 30%;
+    width: 25%;
     height: 100%;
     right: 0;
 }
@@ -81,13 +81,13 @@ body {
 }
 #DONT, #I2 {
     position: absolute;
-    right: 71%;
+    right: 76%;
     top: 50%;
     transform: translate(0%, -50%);
 }
 #NEED, #WANT {
     position: absolute;
-    left: 71%;
+    left: 76%;
     top: 50%;
     transform: translate(0%, -50%);
 }

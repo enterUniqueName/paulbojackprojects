@@ -10,6 +10,7 @@ const four = document.getElementById("four");
 const five = document.getElementById("five");
 const audioTrack = document.getElementById("audioTrack");
 
+// audioTrack.load();
 
 // ----------------------------------------------
 
