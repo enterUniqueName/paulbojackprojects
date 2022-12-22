@@ -239,7 +239,8 @@ function set4() {
     .to(whitescreen, {
         duration: 0,
         opacity: 1,
-    }, '+=5')
+        // timing here is the gap before the "blackout"
+    }, '+=9')
     // Remove remaining text
     .to(I2, {
         duration: 0,
@@ -322,5 +323,5 @@ function master_animation() {
     .add(flash(), '+=0.1')
     .add(set4(), '+=1')
     // fade to black after 8 seconds
-    .add(blackout(), '+=8')
+    // .add(blackout(), '+=8')
 }
