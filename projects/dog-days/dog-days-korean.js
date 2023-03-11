@@ -136,8 +136,8 @@ function master_animation() {
     .add(set2(), '+=2')
     // 2 second gap
     .add(cutToViewer(), '+=2')
-    // 3 seconds on viewer
-    .add(blackout(), '+=3')
+    // 5 seconds on viewer
+    .add(blackout(), '+=5')
     // 2 second gap
     .add(set3(), '+=2')
     // 3 second gap

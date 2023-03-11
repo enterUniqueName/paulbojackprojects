@@ -99,10 +99,17 @@ body {
     font-family: 'EskapadeFraktur', sans-serif;
     font-weight: bold;
     font-size: 8vw;
+    color: white;
 }
 .secondFont {
     font-family: 'EskapadeFraktur', sans-serif;
     font-weight: normal;
     text-transform: lowercase;
     font-size: 6vw;
+}
+.red-bg {
+    background: #451012;
+}
+.blue-bg {
+    background: #001030;
 }

@@ -12,8 +12,43 @@ html, body {
 }
 
 body {
-    margin: 24px;
+    margin: 24px 24px 0px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 36px);
+    box-sizing: border-box;
 }
+/* .content-wrapper {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.inner-wrapper {
+    overflow: auto;
+    height: calc(100% - 36px);
+    padding: 18px 0;
+}
+.content-wrapper:before{
+    content: '';
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(0 0 0) 10%, rgb(0 0 0 / 25%) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    }
+  .content-wrapper:after{
+    content: '';
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(360deg, rgb(0 0 0) 10%, rgb(0 0 0 / 25%) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    } */
 
 h1 { font-size: 2em; }
 
@@ -24,14 +59,10 @@ a  {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     text-align: center;
-    padding-bottom:24px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 48px 24px 48px;
     box-sizing: border-box;
@@ -67,13 +98,13 @@ p { margin: 0; }
         padding: 0;
     }
 }
-@media screen and (max-height: 770px) {
+/* @media screen and (max-height: 770px) {
     footer {
         position:unset;
         margin-top: 48px;
         padding: 0 0 18px 0;
     }
-}
+} */
 
 /* Credits Page */
 .credits-section {
@@ -135,4 +166,16 @@ table td {
     position:absolute;
     right: 36px;
     top: 36px;
+}
+
+.email-address {
+    position:absolute;
+    top: 78px;
+    right: 48px;
+}
+@media screen and (max-width: 724px) {
+    .email-address {
+        right: unset;
+        top: 116px;
+    }
 }

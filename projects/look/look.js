@@ -30,6 +30,10 @@ I2.style.opacity = "0";
 WANT.style.opacity = "0";
 ANYMORE.style.opacity = "0";
 
+whitescreen.classList.toggle("red-bg");
+blackscreenLeft.classList.toggle("red-bg");
+blackscreenRight.classList.toggle("red-bg");
+
 
 function set1() {
     let tl = gsap.timeline();
@@ -105,6 +109,11 @@ function set2() {
         duration: 0,
         opacity: 1,
     }, '+=5')
+    .add(function() {
+        whitescreen.classList.toggle("red-bg");
+        blackscreenLeft.classList.toggle("red-bg");
+        blackscreenRight.classList.toggle("red-bg");
+    }, '<')
     // Remove remaining text
     .to(I2, {
         duration: 0,
@@ -133,6 +142,11 @@ function set3() {
         duration: 0,
         opacity: 1,
     }, '+=0.1')
+    .add(function() {
+        whitescreen.classList.toggle("red-bg");
+        blackscreenLeft.classList.toggle("red-bg");
+        blackscreenRight.classList.toggle("red-bg");
+    }, '<')
     // Add Back Left and Right
     .to(blackscreenLeft, {
         duration: 0,
@@ -179,6 +193,11 @@ function set3() {
         duration: 0,
         opacity: 1,
     }, '+=7')
+    .add(function() {
+        whitescreen.classList.toggle("red-bg");
+        blackscreenLeft.classList.toggle("red-bg");
+        blackscreenRight.classList.toggle("red-bg");
+    }, '<')
     .to(ANYMORE, {
         duration: 0,
         opacity: 0,
@@ -202,6 +221,11 @@ function set4() {
         duration: 0,
         opacity: 1,
     }, '+=0.1')
+    .add(function() {
+        whitescreen.classList.toggle("blue-bg");
+        blackscreenLeft.classList.toggle("blue-bg");
+        blackscreenRight.classList.toggle("blue-bg");
+    }, '<')
     // Add Back Left and Right
     .to(blackscreenLeft, {
         duration: 0,
@@ -250,6 +274,11 @@ function set4() {
         duration: 0,
         opacity: 0,
     }, '<')
+    .add(function() {
+        whitescreen.classList.toggle("blue-bg");
+        blackscreenLeft.classList.toggle("blue-bg");
+        blackscreenRight.classList.toggle("blue-bg");
+    }, '<')
     return tl;
 }
 
@@ -265,14 +294,6 @@ function blackout() {
 function flash() {
     let tl = gsap.timeline();
     tl
-    .to(whitescreen, {
-        opacity: 0,
-        duration: 0.2,
-    }, '+=1')
-    .to(whitescreen, {
-        opacity: 1,
-        duration: 0.2
-    }, '+=1')
     .to(whitescreen, {
         opacity: 0,
         duration: 0.2,
