@@ -67,8 +67,8 @@ function master_animation() {
     }, `+=${vid1.duration}`)
     .to(and, {
         opacity: 1,
-        duration: 0.2,
-    }, '+=0.5')
+        duration: 0,
+    }, '<')
     .to(blackscreen, {
         opacity: 0,
         duration: 0,
@@ -84,8 +84,8 @@ function master_animation() {
     }, '+=4')
     .to(and, {
         opacity: 1,
-        duration: 0.2,
-    }, '+=0.5')
+        duration: 0,
+    }, '+<')
     .add(function() {
         vid2.play();
     }, '+=1.5')
@@ -142,7 +142,7 @@ function master_animation() {
     .to(and, {
         opacity: 1,
         duration: 0.2,
-    }, '+=0.5')
+    }, '<')
     .to(blackscreen, {
         opacity: 0,
         duration: 0,
@@ -158,8 +158,8 @@ function master_animation() {
     }, '+=4')
     .to(and, {
         opacity: 1,
-        duration: 0.2,
-    }, '+=0.5')
+        duration: 0,
+    }, '<')
     .add(function() {
         vid4.play();
     }, '+=1.5')
@@ -185,14 +185,14 @@ function master_animation() {
         vid5.play();
     }, '-=3')
     .to(vid5, {
-        opacity: 0.5,
+        opacity: 0.3,
         duration: 3,
     }, '<')
     .add(function() {
         vid6.play();
     })
     .to(vid6, {
-        opacity: 0.5,
+        opacity: 0.3,
         duration: 3,
     }, '<')
     // -----
