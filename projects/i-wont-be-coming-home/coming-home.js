@@ -17,6 +17,7 @@ const vid3 = document.getElementById("VID3");
 const vid4 = document.getElementById("VID4");
 const vid5 = document.getElementById("VID5");
 const vid6 = document.getElementById("VID6");
+const combo = document.getElementById("COMBO");
 
 blackscreen.style.opacity = "1";
 vid1.style.opacity = "0";
@@ -25,6 +26,7 @@ vid3.style.opacity = "0";
 vid4.style.opacity = "0";
 vid5.style.opacity = "0";
 vid6.style.opacity = "0";
+combo.style.opacity = "0";
 fuck.style.opacity = "0";
 like1.style.opacity = "0";
 think.style.opacity = "0";
@@ -77,11 +79,11 @@ function master_animation() {
         opacity: 0,
         duration: 0,
     }, '<')
-    // 4 seconds on viewer
+    // 3.5 seconds on viewer
     .to(blackscreen, {
         opacity: 1,
         duration: 0,
-    }, '+=4')
+    }, '+=3.5')
     .to(and, {
         opacity: 1,
         duration: 0,
@@ -151,11 +153,11 @@ function master_animation() {
         opacity: 0,
         duration: 0,
     }, '<')
-    // 4 seconds on viewer
+    // 3.5 seconds on viewer
     .to(blackscreen, {
         opacity: 1,
         duration: 0,
-    }, '+=4')
+    }, '+=3.5')
     .to(and, {
         opacity: 1,
         duration: 0,
