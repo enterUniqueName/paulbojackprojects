@@ -68,5 +68,13 @@ body {
 }
 .font-two {
     font-family: 'font2', sans-serif;
-    color: #D2B48C;
+    color: #B08E6C;
+}
+
+#VID5 {
+    left: 33%;
+}
+
+#VID6 {
+    right: 33%;
 }
