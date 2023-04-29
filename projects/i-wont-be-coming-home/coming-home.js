@@ -40,7 +40,7 @@ function master_animation() {
     .to(fuck, {
         duration: 0.2,
         opacity: 1,
-    })
+    }, '+=1')
     .to(like1, {
         duration: 0.2,
         opacity: 1,
