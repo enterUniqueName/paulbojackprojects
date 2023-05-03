@@ -17,6 +17,8 @@ const vid3 = document.getElementById("VID3");
 const vid4 = document.getElementById("VID4");
 const vid5 = document.getElementById("VID5");
 const vid6 = document.getElementById("VID6");
+// New for Combo
+const combo = document.getElementById("COMBO");
 
 blackscreen.style.opacity = "1";
 vid1.style.opacity = "0";
@@ -30,6 +32,8 @@ like1.style.opacity = "0";
 think.style.opacity = "0";
 like2.style.opacity = "0";
 and.style.opacity = "0";
+// new for Combo
+combo.style.opacity = "0";
 
 function master_animation() {
     let tl = gsap.timeline();
@@ -181,29 +185,43 @@ function master_animation() {
         opacity: 0,
         duration: 3,
     }, '<')
+
+    // New for Combo
     .add(function() {
-        vid5.play();
+        combo.play();
     }, '-=3')
-    .to(vid5, {
-        opacity: 0.3,
+    .to(combo, {
+        opacity: 0.4,
         duration: 3,
     }, '<')
-    .add(function() {
-        vid6.play();
-    })
-    .to(vid6, {
-        opacity: 0.3,
-        duration: 3,
-    }, '<')
-    // -----
-    .to(vid5, {
+    .to(combo, {
         opacity: 0,
         duration: 5,
-    }, '+=5')
-    .to(vid6, {
-        opacity: 0,
-        duration: 5,
-    }, '<')
+    }, '+=7')
+
+    // .add(function() {
+    //     vid5.play();
+    // }, '-=3')
+    // .to(vid5, {
+    //     opacity: 0.3,
+    //     duration: 3,
+    // }, '<')
+    // .add(function() {
+    //     vid6.play();
+    // })
+    // .to(vid6, {
+    //     opacity: 0.3,
+    //     duration: 3,
+    // }, '<')
+    // // -----
+    // .to(vid5, {
+    //     opacity: 0,
+    //     duration: 5,
+    // }, '+=5')
+    // .to(vid6, {
+    //     opacity: 0,
+    //     duration: 5,
+    // }, '<')
     .to(blackscreen, {
         opacity: 1,
         duration: 5,
