@@ -97,10 +97,10 @@ line {
 
 @keyframes color-one {
     from { color: black; stroke: black; }
-    to   { color: #112F24; stroke: #112F24; }
+    to   { color: #04793C; stroke: #04793C; }
 }
 @keyframes color-two {
-    from { color: #112F24; stroke: #112F24; }
+    from { color: #04793C; stroke: #04793C; }
     to   { color: Black; stroke: Black; }
 }
 @keyframes color-three {

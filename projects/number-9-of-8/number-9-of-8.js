@@ -82,6 +82,9 @@ colorBurstVid.style.opacity = "0";
 pigeonVid.style.opacity = "0";
 eyeCloseVid.style.opacity = "0";
 
+eyeOpenVid.load();
+musicTrack.load();
+
 //master fade function
 function fade_function() {
     blackscreen.style.transition = "opacity 2s ease";

@@ -60,6 +60,9 @@ bloodVid.style.opacity = "0";
 handsYoungVid.style.opacity = "0";
 iceVid.style.opacity = "0";
 
+document.getElementById("audio_element").load();
+treeVid.load();
+
 function playAudio() {
     document.getElementById("audio_element").play();
 }
@@ -72,57 +75,57 @@ function fade_function() {
     bloodVid.style.transition = "opacity 3s ease";
     handsYoungVid.style.transition = "opacity 3s ease";
     iceVid.style.transition = "opacity 3s ease";
+        
+        setTimeout(function() {
+            playAudio();
+        }, startFadeUpTree - 2000)
 
-    setTimeout(function() {
-        playAudio();
-    }, startFadeUpTree - 2000)
+        setTimeout(function() {
+            treeVid.play()
+            treeVid.style.opacity = vidOpacity;
+        }, startFadeUpTree)
 
-    setTimeout(function() {
-        treeVid.play()
-        treeVid.style.opacity = vidOpacity;
-    }, startFadeUpTree)
+        setTimeout(function() {
+            treeVid.style.opacity = "0";
+        }, startFadeDownTree)
 
-    setTimeout(function() {
-        treeVid.style.opacity = "0";
-    }, startFadeDownTree)
+        setTimeout(function() {
+            handsOldVid.play();
+            handsOldVid.style.opacity = vidOpacity;
+        }, startFadeUpHandsOld)
 
-    setTimeout(function() {
-        handsOldVid.play();
-        handsOldVid.style.opacity = vidOpacity;
-    }, startFadeUpHandsOld)
+        setTimeout(function() {
+            // handsOldVid.style.opacity = "0";
+            bloodVid.play();
+            bloodVid.style.opacity = vidOpacity;
+        }, startFadeDownHandsOld)
+        // Extra set timeout so old hands can stay under blood drip video
+        setTimeout(function() {
+            handsOldVid.style.opacity = "0";
+        }, startFadeDownHandsOld + 3000)
 
-    setTimeout(function() {
-        // handsOldVid.style.opacity = "0";
-        bloodVid.play();
-        bloodVid.style.opacity = vidOpacity;
-    }, startFadeDownHandsOld)
-    // Extra set timeout so old hands can stay under blood drip video
-    setTimeout(function() {
-        handsOldVid.style.opacity = "0";
-    }, startFadeDownHandsOld + 3000)
+        setTimeout(function() {
+            bloodVid.style.opacity = "0";
+        }, startFadeDownBlood)
 
-    setTimeout(function() {
-        bloodVid.style.opacity = "0";
-    }, startFadeDownBlood)
+        setTimeout(function() {
+            handsYoungVid.play();
+            handsYoungVid.style.opacity = vidOpacity;
+        }, startFadeUpHandsYoung)
 
-    setTimeout(function() {
-        handsYoungVid.play();
-        handsYoungVid.style.opacity = vidOpacity;
-    }, startFadeUpHandsYoung)
+        setTimeout(function() {
+            handsYoungVid.style.opacity = "0";
+        }, startFadeDownHandsYoung)
 
-    setTimeout(function() {
-        handsYoungVid.style.opacity = "0";
-    }, startFadeDownHandsYoung)
+        setTimeout(function() {
+            iceVid.play();
+            iceVid.style.opacity = vidOpacity;
+        }, startFadeUpIce)
 
-    setTimeout(function() {
-        iceVid.play();
-        iceVid.style.opacity = vidOpacity;
-    }, startFadeUpIce)
+        setTimeout(function() {
+            // iceVid.style.opacity = "0";
+            blackscreen.style.opacity = "1";
+            blackscreen.style.zIndex = "1";
+        }, startFadeDownIce)
 
-    setTimeout(function() {
-        // iceVid.style.opacity = "0";
-        blackscreen.style.opacity = "1";
-        blackscreen.style.zIndex = "1";
-    }, startFadeDownIce)
-
-}
+};
