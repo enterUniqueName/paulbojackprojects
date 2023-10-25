@@ -74,7 +74,7 @@ function muggedPattern() {
     return tl;
 }
 
-function perpPattern(article, ethnicity) {
+function perpPattern(byPause, articlePause, article, ethnicity) {
     let tl = gsap.timeline();
     tl
     .call(toggleClass, [background, 'fill-black'])
@@ -91,13 +91,13 @@ function perpPattern(article, ethnicity) {
         display: 'block',
         duration: 0.5,
         opacity: 1,
-    }, '+=0.5')
+    }, byPause)
     .to(ethnicity, {
         display: 'block',
         duration: 0.5,
         opacity: 1,
         // 2 second pause after article before ethnicity
-    }, '+=2')
+    }, articlePause)
     .to(guy, {
         display: 'block',
         duration: 0.5,
@@ -115,36 +115,41 @@ function perpPattern(article, ethnicity) {
 function finalPattern() {
     let tl = gsap.timeline();
     tl
+    .call(toggleClass, [background, 'fill-black'])
+    .to(background, {
+        duration: 1,
+        opacity: 1,
+    })
     .to(i, {
         display: 'block',
+        duration: 0.5,
         opacity: 1,
-        duration: 0,
-    }, '+=0.1')
+    }, '+=1')
     .to(was, {
         display: 'block',
+        duration: 0.5,
         opacity: 1,
-        duration: 0,
-    }, '<')
+    }, '+=0.5')
     .to(mugged, {
         display: 'block',
+        duration: 0.5,
         opacity: 1,
-        duration: 0,
-    }, '<')
-    .to(background, {
-        duration: 5,
-        opacity: 1,
-    }, '+=4')
+    }, '+=0.5')
     .to(period, {
         display: 'block',
         opacity: 1,
         duration: 0.5,
-    }, "+=3")
+    }, "+=2")
     .to(background, {
-        duration: 0,
+        duration: 0.1,
+        opacity: 0,
+    }, '+=1')
+    .call(hideText,[], '<')
+    .to(background, {
+        duration: 0.1,
         opacity: 1,
         background: '#000000',
     }, '+=4')
-    .call(hideText,[], '<')
     return tl;
 }
 
@@ -153,14 +158,13 @@ function master_animation() {
     let tl = gsap.timeline();
     tl
     .add(muggedPattern)
-    .add(perpPattern(a, white), "+=11")
+    .add(perpPattern('+=0.5', '+=2', a, white), "+=11")
     .add(muggedPattern, "+=5")
-    .add(perpPattern(a, black), "+=11")
+    .add(perpPattern('+=0.5', '+=2', a, black), "+=11")
     .add(muggedPattern, "+=5")
-    .add(perpPattern(a, hispanic), "+=11")
+    .add(perpPattern('+=0.5', '+=2', a, hispanic), "+=11")
     .add(muggedPattern, "+=5")
-    .add(perpPattern(an, asian), "+=11")
-    .add(muggedPattern, "+=5")
-    .add(finalPattern, "+=5.44")
+    .add(perpPattern('+=2', '+=0.5', an, asian), "+=11")
+    .add(finalPattern, "+=5")
     return tl;
 };
