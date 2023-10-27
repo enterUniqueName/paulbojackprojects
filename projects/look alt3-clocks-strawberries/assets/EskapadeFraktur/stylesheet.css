@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Eskapade Fraktur Th';
+    src: url('EskapadeFraktur-ThinItalic.eot');
+    src: local('Eskapade Fraktur Th Italic'), local('EskapadeFraktur-ThinItalic'),
+        url('EskapadeFraktur-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-ThinItalic.woff2') format('woff2'),
+        url('EskapadeFraktur-ThinItalic.woff') format('woff'),
+        url('EskapadeFraktur-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Eskapade Fraktur Th';
+    src: url('EskapadeFraktur-Thin.eot');
+    src: local('Eskapade Fraktur Th'), local('EskapadeFraktur-Thin'),
+        url('EskapadeFraktur-Thin.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-Thin.woff2') format('woff2'),
+        url('EskapadeFraktur-Thin.woff') format('woff'),
+        url('EskapadeFraktur-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eskapade Fraktur Bl';
+    src: url('EskapadeFraktur-BlackItalic.eot');
+    src: local('Eskapade Fraktur Bl Italic'), local('EskapadeFraktur-BlackItalic'),
+        url('EskapadeFraktur-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-BlackItalic.woff2') format('woff2'),
+        url('EskapadeFraktur-BlackItalic.woff') format('woff'),
+        url('EskapadeFraktur-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Eskapade Fraktur Bl';
+    src: url('EskapadeFraktur-Black.eot');
+    src: local('Eskapade Fraktur Bl'), local('EskapadeFraktur-Black'),
+        url('EskapadeFraktur-Black.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-Black.woff2') format('woff2'),
+        url('EskapadeFraktur-Black.woff') format('woff'),
+        url('EskapadeFraktur-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eskapade Fraktur';
+    src: url('EskapadeFraktur-RegularItalic.eot');
+    src: local('Eskapade Fraktur Italic'), local('EskapadeFraktur-RegularItalic'),
+        url('EskapadeFraktur-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-RegularItalic.woff2') format('woff2'),
+        url('EskapadeFraktur-RegularItalic.woff') format('woff'),
+        url('EskapadeFraktur-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Eskapade Fraktur';
+    src: url('EskapadeFraktur-Regular.eot');
+    src: local('Eskapade Fraktur'), local('EskapadeFraktur-Regular'),
+        url('EskapadeFraktur-Regular.eot?#iefix') format('embedded-opentype'),
+        url('EskapadeFraktur-Regular.woff2') format('woff2'),
+        url('EskapadeFraktur-Regular.woff') format('woff'),
+        url('EskapadeFraktur-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

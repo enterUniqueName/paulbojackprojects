@@ -139,7 +139,7 @@ function finalPattern() {
         display: 'block',
         opacity: 1,
         duration: 0.5,
-    }, "+=2")
+    }, "+=3.5")
     .to(background, {
         duration: 0.1,
         opacity: 0,

@@ -46,7 +46,7 @@ function playClock(src) {
     whitescreen.style.opacity = "0";
     blackscreenLeft.style.opacity = "0";
     blackscreenRight.style.opacity = "0";
-    src.style.opacity = '0.5';
+    src.style.opacity = '0.35';
 }
  
 
