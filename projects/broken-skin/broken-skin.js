@@ -149,7 +149,7 @@ function finalPattern() {
         duration: 0.1,
         opacity: 1,
         background: '#000000',
-    }, '+=4')
+    }, '+=6')
     return tl;
 }
 

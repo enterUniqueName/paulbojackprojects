@@ -149,11 +149,11 @@ function set1() {
         duration: 3,
         opacity: 1,
     })
-    // ----- hold on these for 7.5 seconds, then 5 second dissolve to half dark screen
+    // ----- hold on these for 6.5 seconds, then 5 second dissolve to half dark screen
     .to(blackscreen, {
         opacity: 0.75,
         duration: 5,
-    }, "+=7.5")
+    }, "+=6.5")
     .to(third, {
         duration: 5,
         opacity: 0,
