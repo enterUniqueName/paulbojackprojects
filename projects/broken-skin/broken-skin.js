@@ -143,7 +143,7 @@ function finalPattern() {
     .to(background, {
         duration: 0.1,
         opacity: 0,
-    }, '+=1')
+    }, '+=2.5')
     .call(hideText,[], '<')
     .to(background, {
         duration: 0.1,

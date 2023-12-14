@@ -41,8 +41,8 @@ clock1.style.opacity = "0";
 clock2.style.opacity = "0";
 
 function playClock(src) {
+    src.style.transition = "opacity 3s";
     src.style.opacity = '0.35';
-    src.style.transition = "opacity 0.5s"
     src.play();
 }
  
@@ -149,13 +149,16 @@ function set3() {
     let tl = gsap.timeline();
     tl
     .to(clock1, {
-        duration: 1,
+        duration: 0,
         opacity: 0,
     }, '+=0.1')
+    .add(function() {
+        clock1.style.transition = "opacity 0s linear";
+    }, '<')
     .to(whitescreen, {
         duration: 0,
         opacity: 1,
-    }, '+=2')
+    }, '<')
     .add(function() {
         whitescreen.classList.toggle("red-bg");
         blackscreenLeft.classList.toggle("red-bg");
@@ -175,7 +178,7 @@ function set3() {
     .to(I1, {
         duration: 0,
         opacity: 1,
-    }, '+=1')
+    }, '+=2')
     .to(DONT, {
         duration: 0,
         opacity: 1,
@@ -232,13 +235,16 @@ function set4() {
     let tl = gsap.timeline();
     tl
     .to(clock2, {
-        duration: 1,
+        duration: 0,
         opacity: 0,
     }, '+=0.1')
+    .add(function() {
+        clock2.style.transition = "opacity 0s linear";
+    }, '<')
     .to(whitescreen, {
         duration: 0,
         opacity: 1,
-    }, '+=2')
+    }, '<')
     .add(function() {
         whitescreen.classList.toggle("blue-bg");
         blackscreenLeft.classList.toggle("blue-bg");
@@ -264,7 +270,7 @@ function set4() {
     .to(BUT, {
         duration: 0,
         opacity: 1,
-    }, "+=1")
+    }, "+=2")
     .to(I2, {
         duration: 0,
         opacity: 1,
@@ -361,11 +367,11 @@ function master_animation() {
     .add(set1(), '2')
     .add(set2(), '+=0.1')
     // .add(flash(), '+=0.1')
-    .call(playClock, [clock1], '+=0.1')
-    .add(set3(), '+=7')
+    .call(playClock, [clock1], '-=2')
+    .add(set3(), '+=9')
     // .add(flash(), '+=0.1')
-    .call(playClock, [clock2], '+=0.1')
-    .add(set4(), '+=7')
+    .call(playClock, [clock2], '-=2')
+    .add(set4(), '+=9')
     // fade to black after 8 seconds
     // .add(blackout(), '+=8')
 }
