@@ -39,7 +39,7 @@ function audioAnimation() {
     // after 3 seconds of video, cut to 50% over top of viewer
     .to(cloudVid, {
         duration: 2,
-        opacity: 0.7,
+        opacity: 0.8,
     }, "+=3")
     //after 1 second of viewer, kick off first audio
     .call(playAudio, [audio1], ">1")
