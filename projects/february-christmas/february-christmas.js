@@ -7,7 +7,8 @@ const bloodVid = document.getElementById("bloodVid");
 const handsYoungVid = document.getElementById("handsYoungVid");
 const iceVid = document.getElementById("iceVid");
 
-const vidOpacity = "0.5";
+// const vidOpacity = "0.5";
+const vidOpacity = "0.65";
 
 // Global Timing
 const fade = 3000;

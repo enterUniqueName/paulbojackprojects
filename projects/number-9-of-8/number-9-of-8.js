@@ -15,7 +15,8 @@ const eyeCloseVid = document.getElementById("eyeCloseVid");
 const audioTrack = document.getElementById("audioTrack");
 const musicTrack = document.getElementById("musicTrack");
 
-const vidOpacity = "0.4";
+// const vidOpacity = "0.4";
+const vidOpacity = "0.55";
 
 // Global Timing
 const fade = 2000;
