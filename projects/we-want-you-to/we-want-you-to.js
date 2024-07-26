@@ -4,13 +4,39 @@ const camContainer = document.getElementById("cam_container");
 
 const background = document.getElementById("background");
 const cloudVid = document.getElementById("vid");
-
+cloudVid.addEventListener('loadeddata', () => start_showing('3'));
 const audio1 = document.getElementById("audioTrack1");
+audio1.addEventListener('loadeddata', () => start_showing('4'));
 const audio2 = document.getElementById("audioTrack2");
+audio2.addEventListener('loadeddata', () => start_showing('5'));
 const audio3 = document.getElementById("audioTrack3");
+audio3.addEventListener('loadeddata', () => start_showing('6'));
 const audio4 = document.getElementById("audioTrack4");
+audio4.addEventListener('loadeddata', () => start_showing('7'));
 const audio5 = document.getElementById("audioTrack5");
+audio5.addEventListener('loadeddata', () => start_showing('8'));
 const audio6 = document.getElementById("audioTrack6");
+audio6.addEventListener('loadeddata', () => start_showing('9'));
+
+
+const assets = [cloudVid, audio1, audio2, audio3, audio4, audio5, audio6];
+
+function start_showing(id) {
+    let count = 0;
+    for (let key in assets) {
+        if (assets[key].readyState >= 4) { count = count + 1 }
+        //console.log(assets[key].id, assets[key].readyState)
+    }
+    console.log('count num:', count);
+    if (count >= assets.length) {
+        console.log(count, id, 'start now');
+       master_animation()
+    } else {
+        console.log(count, id, 'waiting for ...');
+    }
+}
+
+
 
 background.style.opacity = "0";
 cloudVid.style.opacity = "1";
@@ -20,10 +46,13 @@ function cutToViewer() {
 };
 
 function playAudio(a) {
+    console.log(a);
     a.play();
+    a.loop = false;
 };
 
 function playVideo() {
+    console.log('play video');
     cloudVid.play();
 };
 
@@ -94,10 +123,8 @@ function audioAnimation() {
 
 
 
-
 function master_animation() {
     let tl = gsap.timeline();
-    tl
-    .add(audioAnimation)
+    tl.add(audioAnimation)
     return tl;
 };

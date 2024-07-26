@@ -21,7 +21,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(255,0,0,0);
-    -webkit-text-stroke: 1.5px red;
+    -webkit-text-stroke: 3px red;
 }
 
 /* individual letters */
