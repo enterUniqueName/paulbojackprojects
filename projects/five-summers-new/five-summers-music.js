@@ -95,7 +95,7 @@ function set1() {
     // ----------
     // 5s fade to half black, hold 10 on half black, 3s to 0 black, then cut to black
     .to(blackscreen, {
-        opacity: 0.25,
+        opacity: 0.75,
         duration: 5,
     }, holdOnViewerBeforeFade)
     .to(blackscreen, {
