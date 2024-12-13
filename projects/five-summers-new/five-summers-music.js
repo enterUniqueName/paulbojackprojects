@@ -100,7 +100,7 @@ function set1() {
     }, holdOnViewerBeforeFade)
     .to(blackscreen, {
         opacity: 0,
-        duration: 3,
+        duration: 6,
     }, holdOnBlack)
 
     // ----------
