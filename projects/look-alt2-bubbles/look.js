@@ -5,6 +5,7 @@ const blackscreen = document.getElementById("blackscreen");
 const blackscreenLeft = document.getElementById("blackscreen-left");
 const blackscreenRight = document.getElementById("blackscreen-right");
 const whitescreen = document.getElementById("whitescreen");
+const audioTrack1 = document.getElementById("audioTrack1");
 
 camContainer.style.opacity = "1";
 blackscreen.style.opacity = "0";
@@ -44,6 +45,10 @@ function playClock(src) {
     src.style.transition = "opacity 3s";
     src.style.opacity = '0.35';
     src.play();
+}
+
+function playTrack() {
+    audioTrack1.play();
 }
  
 
@@ -367,7 +372,8 @@ function master_animation() {
     .add(set1(), '2')
     .add(set2(), '+=0.1')
     // .add(flash(), '+=0.1')
-    .call(playClock, [clock1], '-=2')
+    .call(playTrack, [], '-=2')
+    .call(playClock, [clock1], '<+=3')
     .add(set3(), '+=9')
     // .add(flash(), '+=0.1')
     .call(playClock, [clock2], '-=2')
