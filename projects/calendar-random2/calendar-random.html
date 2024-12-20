@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Paul Bojack Projects: Your Amended Calendar</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='../global.css' rel='stylesheet'>
+  <link href='calendar-random.css' rel='stylesheet'>
+
+  <script src="./calendar_random.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- home button -->
+  <div id="home" class="home">
+
+    <a href="javascript:history.back()">←</a>
+
+  </div>
+
+  <!-- camera -->
+  <div id="cam_container" class="cam_container">
+
+    <video autoplay="true" id="cam_element" class="cam_element" value="true" onloadedmetadata="calendar_function()"></video>
+
+  </div>
+
+  <!-- project area -->
+  <div id="calendar_container">
+
+    <div id="blackout-grid-override" class="blackout-grid-override"></div>
+
+    <div id="cal_grid" class="cal-grid">
+      <!-- <div class="corner top left" style="border-right: none; border-bottom: none;">
+        <svg>
+          <line x1='0' y1='0' x2='100%' y2='100%' />
+        </svg>
+      </div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="corner top right" style="border-left: none; border-bottom: none;">
+        <svg>
+          <line x1='0' y1='100%' x2='100%' y2='0' />
+        </svg>
+      </div> -->
+
+      <!-- <div  class="no-border-tb">&nbsp;</div> -->
+      <div class="day no-border t l r border-color"><span id="day-zero" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-one" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-two" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-three" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-four" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-five" class="content"></span></div>
+      <div class="day no-border t l r border-color"><span id="day-six" class="content"></span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+      <div class="no-border l border-color"><span id="date-zero" class="content"></span></div>
+      <div class="border-color"><span id="date-one" class="content"></span></div>
+      <div class="border-color"><span id="date-two" class="content"></span></div>
+      <div class="border-color"><span id="date-three" class="content"></span></div>
+      <div class="border-color"><span id="date-four" class="content"></span></div>
+      <div class="border-color"><span id="date-five" class="content"></span></div>
+      <div class="no-border r border-color"><span id="date-six" class="content"></span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+      <div class="no-border l border-color"><span id="date-seven" class="content"></span></div>
+      <div class="border-color"><span id="date-eight" class="content"></span></div>
+      <div class="border-color"><span id="date-nine" class="content"></span></div>
+      <div class="border-color"><span id="date-ten" class="content"></span></div>
+      <div class="border-color"><span id="date-eleven" class="content"></span></div>
+      <div class="border-color"><span id="date-twelve"class="content"></span></div>
+      <div class="no-border r border-color"><span id="date-thirteen" class="content"></span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+      <div class="no-border l border-color"><span  id="date-fourteen" class="content"></span></div>
+      <div class="border-color"><span id="date-fifteen" class="content"></span></div>
+      <div class="border-color"><span id="date-sixteen" class="content"></span></div>
+      <div class="border-color"><span id="date-seventeen" class="content"></span></div>
+      <div class="border-color"><span id="date-eighteen" class="content"></span></div>
+      <div class="border-color"><span id="date-nineteen" class="content"></span></div>
+      <div class="no-border r border-color"><span id="date-twenty" class="content"></span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+      <div class="no-border l border-color"><span id="date-twentyone" class="content"></span></div>
+      <div class="border-color"><span id="date-twentytwo" class="content"></span></div>
+      <div class="border-color"><span id="date-twentythree" class="content"></span></div>
+      <div class="border-color"><span id="date-twentyfour" class="content"></span></div>
+      <div class="border-color"><span id="date-twentyfive" class="content"></span></div>
+      <div class="border-color"><span id="date-twentysix" class="content"></span></div>
+      <div class="no-border r border-color"><span id="date-twentyseven" class="content"></span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+      <div class="no-border b l border-color"><span id="date-twentyeight" class="content"></span></div>
+      <div class="no-border b border-color"><span id="date-twentynine" class="content"></span></div>
+      <div class="no-border b border-color"><span id="date-thirty" class="content"></span></div>
+      <div class="no-border b border-color"><span id="date-blank-1" class="content">&nbsp;</span></div>
+      <div class="no-border b border-color"><span id="date-blank-2" class="content">&nbsp;</span></div>
+      <div class="no-border b border-color"><span id="date-blank-3" class="content">&nbsp;</span></div>
+      <div class="no-border b r border-color"><span id="date-blank-4" class="content">&nbsp;</span></div>
+      <!-- <div class="no-border-tb">&nbsp;</div> -->
+
+      <!-- <div class="corner bottom left" style="border-right: none; border-top: none;">
+        <svg>
+          <line x1='0' y1='100%' x2='100%' y2='0' />
+        </svg>
+      </div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="no-border-lr">&nbsp;</div>
+      <div class="corner bottom right" style="border-left: none; border-top: none;">
+        <svg>
+          <line x1='0' y1='0' x2='100%' y2='100%' />
+        </svg>
+      </div> -->
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+
+    //webcam function
+    var video = document.querySelector("#cam_element");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({video:true})
+      .then(function (stream) {
+        video.srcObject = stream;
+        document.querySelector("cam_container").value="false";
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+    }
+
+    //project specific scripts
+
+    var calGrid = document.getElementById("cal_grid");
+    var nodes = document.getElementsByClassName("content");
+    var borders = document.getElementsByClassName("border-color");
+    var timer;
+
+    function fadein_bg() {
+      document.getElementById("calendar_container").classList.add("fadein_bg");
+    }
+    function fade_in() {
+      calGrid.style.opacity = 1;
+    }
+    function fade_out() {
+      calGrid.style.opacity = 0;
+    }
+    function blackout() {
+      document.getElementById("calendar_container").classList.add("blackout");
+      // Timeout to fade the grid out. 6 seconds of fade to black on the video, then 3 seconds of full opacity, then apply classname for 6 sec fade.
+      setTimeout(function() {
+        document.getElementById("blackout-grid-override").classList.add("blackout-override");
+      }, 9000);
+    }
+
+    function display(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      assign_dates();
+      assign_days();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+
+    function randomizer(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+
+    function randomizer2(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+    function randomizer2_flip(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+
+    function randomizer3(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days_as_numbers();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+    function randomizer3_flip(color) {
+      for(var i = 0; i < nodes.length; i++){
+        nodes[i].style.color = color;
+      }
+      for(var i = 0; i < borders.length; i++){
+        borders[i].style.color = color;
+      }
+      var divs = document.querySelectorAll('.content');
+      for (var i = 0; i < divs.length; i++) {
+        divs[i].classList.remove('flip');
+      }
+      shuffle(number_array);
+      shuffle(day_array);
+      assign_dates();
+      assign_days_as_numbers();
+      assign_blanks();
+      fade_in();
+      setTimeout(fade_out, 7000);
+      console.log(color);
+    }
+
+    var beginningdelay = 3000;
+    var onerun = 10670;
+    var time1 = 0;
+    var time2 = onerun;
+    var time3 = onerun * 2;
+    var time4 = onerun * 3;
+    var fulltime = time4 + onerun;
+
+    function numberTimer() {
+      console.log('start timer 1');
+      setTimeout(display, time1, "#000000"); //Black
+      setTimeout(randomizer, time2, "#1313AE"); //Blue
+      setTimeout(randomizer, time3, "#FFF200"); //Yellow
+      setTimeout(randomizer, time4, "#4112CA"); //Purple
+    }
+
+    function addBlanksTimer() {
+      console.log('start timer 2');
+      setTimeout(randomizer2_flip, time1, "#FF5500"); //Orange
+      setTimeout(randomizer2, time2, "#1313AE"); //Blue
+      setTimeout(randomizer2_flip, time3, "#FFF200"); //Yellow
+      setTimeout(randomizer2, time4, "#4112CA"); //Purple
+    }
+
+    function addTextTimer() {
+      console.log('start timer 3');
+      setTimeout(randomizer3_flip, time1, "#FF5500"); //Orange
+      setTimeout(randomizer3, time2, "#1313AE"); //Blue
+      setTimeout(randomizer3_flip, time3, "#FFF200"); //Yellow
+      setTimeout(randomizer3, time4, "#4112CA"); //Purple
+    }
+
+    function calendar_function() {
+      assign_dates();
+      setTimeout(function () {
+        fadein_bg();
+        numberTimer();
+      }, beginningdelay);
+      setTimeout(function () {
+        // clearTimeout(timer1);
+        number_array.push('', '', '', '');
+        fadein_bg();
+        addBlanksTimer();
+      }, beginningdelay + fulltime);
+      setTimeout(function () {
+        // clearTimeout(timer2);
+        let arr = number_array;
+        console.log(arr);
+
+        const result = arr.filter(
+          function(x) {
+            return x !== "";
+          }
+        );
+          
+        console.log(result);
+
+        number_array = result;
+
+        number_array.push(
+          // "<span>3</span>" + "<span class='flip'>3</span>",
+          '33',
+          '99', 
+          '77',
+          // "<span>7</span>" + "<span class='flip'>7</span>", 
+          "<span class='zero-left'>0</span>" + "<span class='zero-right'>0</span>"
+        );
+
+        number_array.push('THURSDAY', 'MONDAY', 'SUNDAY', 'TUESDAY', 'SATURDAY', 'FRIDAY', 'WEDNESDAY');
+        fadein_bg();
+        addTextTimer();
+      }, beginningdelay + fulltime + fulltime);
+      setTimeout(function () {
+        blackout();
+        //clearTimeout(timer3);
+      }, beginningdelay + fulltime + fulltime + fulltime); //total section run time 104000
+    }
+
+  </script>
+
+</body>
+
+</html>
